@@ -8,9 +8,10 @@ get_header('vetq'); ?>
     <div class="app">
         <?php get_template_part("backend/components/header"); ?>
         <main class="main">
-            <div class="container">
-                <h1><?= get_the_title()?></h1>
-            </div>
+            <?php get_template_part("backend/components/breadcrumbs"); ?>
+            <?php while (have_posts()) : the_post();
+                get_the_title();
+            endwhile; ?>
         </main>
         <?php get_template_part("backend/components/footer");?>
     </div>

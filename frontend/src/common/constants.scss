@@ -1,0 +1,176 @@
+// COLORS START:
+$GRAY_1: #161616;
+$GRAY_2: #eaeaea;
+$GRAY_3: #9b9b9b;
+$GRAY_4: #f7f7f7;
+$GRAY_5: #525252;
+$WHITE: #ffffff;
+$PRIMARY_1: #105bb5;
+$PRIMARY_2: #5d9ff5;
+$PRIMARY_3: #bc2232;
+$PRIMARY_4: #a05300;
+// COLORS END;
+
+// MEDIA SCREENS START:
+$MEDIA: (
+    SM: 768px,
+    MD: 1024px,
+    LG: 1280px,
+    XL: 1366px,
+    XLL: 1440px,
+    HD: 1920px,
+    XHD: 2560px
+);
+
+@mixin sm {
+    @media (min-width: map_get($MEDIA, SM)) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: map_get($MEDIA, MD)) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: map_get($MEDIA, LG)) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: map_get($MEDIA, XL)) {
+        @content;
+    }
+}
+
+@mixin xll {
+    @media (min-width: map_get($MEDIA, XLL)) {
+        @content;
+    }
+}
+
+@mixin hd {
+    @media (min-width: map_get($MEDIA, HD)) {
+        @content;
+    }
+}
+
+@mixin xhd {
+    @media (min-width: map_get($MEDIA, XHD)) {
+        @content;
+    }
+}
+// MEDIA SCREENS END;
+
+// TITLES START
+
+@mixin h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: $GRAY_1;
+}
+
+// TITLES END
+
+// CONTAINER START:
+@mixin container() {
+    $MAX-WIDTH_LG: 1236px;
+
+    .container {
+        padding: 0 1.5rem;
+        position: relative;
+        width: 100%;
+
+        @include lg {
+            max-width: $MAX-WIDTH_LG;
+            padding: 0 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+// CONTAINER END;
+
+// EDITOR START:
+@mixin editor() {
+    line-height: 1.5;
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 0.67em;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.75em;
+    }
+    h3 {
+        font-size: 1.17em;
+        margin-bottom: 0.83em;
+    }
+    h5 {
+        font-size: 0.83em;
+        margin-bottom: 1.5em;
+    }
+    h6 {
+        font-size: 0.75em;
+        margin-bottom: 1.67em;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+    }
+
+    p {
+        display: block;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-bottom: 1em;
+        padding-left: 40px;
+    }
+
+    ol {
+        display: block;
+        list-style-type: decimal;
+        margin-bottom: 1em;
+        padding-left: 40px;
+    }
+
+    b,
+    strong {
+        font-weight: 600;
+    }
+
+    i {
+        font-style: italic;
+    }
+
+    a {
+        color: $PRIMARY_1;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+}
+// EDITOR END;

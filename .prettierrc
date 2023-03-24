@@ -1,0 +1,31 @@
+{
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "lwc",
+        "tabWidth": 4,
+        "bracketSameLine": true,
+        "printWidth": 100
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "printWidth": 100
+      }
+    },
+    {
+      "files": "*.{css,scss}",
+      "options": {
+        "singleQuote": true,
+        "tabWidth": 4,
+        "printWidth": 100
+      }
+    }
+  ]
+}

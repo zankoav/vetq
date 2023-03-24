@@ -1,0 +1,35 @@
+@import './../../common/constants';
+
+.breadcrumbs {
+    background-color: $GRAY_4;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    color: $GRAY_1;
+    font-weight: 600;
+    font-size: 16px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__link {
+        color: $GRAY_1;
+        &:after {
+            content: '/';
+            padding: 0 0.5rem;
+        }
+    }
+
+    &__item {
+        &:last-child {
+            a {
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+}

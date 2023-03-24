@@ -1,0 +1,58 @@
+@import './../../common/constants';
+
+.footer {
+    background: $GRAY_1;
+    color: $WHITE;
+    padding: 80px 0 16px;
+
+    @include md {
+        padding-bottom: 1.5rem;
+    }
+
+    &__logo-wrapper {
+        margin-bottom: 32px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__logo-link {
+        text-decoration: none;
+        display: flex;
+    }
+
+    &__logo-icon {
+        height: 48px;
+        object-fit: contain;
+
+        @include sm {
+            height: 60px;
+        }
+    }
+
+    &__logo-text {
+        @include sm {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-left: 1rem;
+            margin-bottom: 13px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 80px;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 600;
+
+        @include sm {
+            max-width: 70%;
+        }
+    }
+
+    &__copyed {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}

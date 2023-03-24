@@ -1,0 +1,13 @@
+@import './../../common/constants';
+
+.p404 {
+    background-color: $GRAY_4;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        @include h1;
+    }
+}

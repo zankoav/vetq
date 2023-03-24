@@ -1,0 +1,14 @@
+include ./common/mixins
+- var breadCrumbs = [{title:"Главная",href:"/"},{title:"Каталог",href:"/catalog.html"}, {title:"Антибактериальные препараты",href:"/catalog.html"}];
+doctype html
+html
+    head
+        +meta()
+    body
+        .app
+            +header()             
+            main.main 
+                +breadcrumbs(breadCrumbs)
+                .container
+                    +catalog()
+            +footer()

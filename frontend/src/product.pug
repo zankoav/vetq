@@ -1,0 +1,16 @@
+include ./common/mixins
+- var breadCrumbs = [{title:"Главная",href:"/"},{title:"Каталог",href:"/catalog.html"},{title:"Продукт 1",href:"/product.html"}];
+
+doctype html
+html
+    head
+        +meta()
+    body
+        .app
+            +header()
+            main.main 
+                +breadcrumbs(breadCrumbs)
+                .container 
+                    +product-main({title: "Азитронит", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel modi harum architecto ut cupiditate inventore soluta labore quas excepturi repellat.", type:"Антибактериальные"})
+                    +accordion-mixed([{title: "Описание"},{title: "Описание"}])
+            +footer()

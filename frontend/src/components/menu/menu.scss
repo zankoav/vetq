@@ -1,0 +1,195 @@
+@import './../../common/constants';
+
+.menu-wrapp {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &__button {
+        display: flex;
+        padding: 1.5rem;
+        padding-right: 0;
+        @include lg {
+            display: none;
+        }
+    }
+}
+
+.admin-bar .menu {
+    top: 118px;
+
+    @include sm {
+        top: 146px;
+    }
+}
+
+.menu {
+    position: fixed;
+    background-color: $WHITE;
+    top: 72px;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid $GRAY_2;
+    z-index: 100;
+
+    &_mobile {
+        display: block;
+    }
+
+    @include sm {
+        top: 100px;
+    }
+
+    @include lg {
+        border-bottom: initial;
+        height: 100%;
+        top: initial;
+        left: initial;
+        width: initial;
+        position: initial;
+        display: flex;
+
+        &_mobile {
+            display: flex;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            display: block;
+            position: relative;
+            padding: 0.5rem 1.5rem;
+            width: 100%;
+            color: $GRAY_1;
+            font-size: 16px;
+            font-weight: 600;
+            transition: color 0.3s ease-in;
+
+            @include lg {
+                padding: 1rem;
+                width: initial;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 1rem;
+                    background-color: $GRAY_1;
+                    transition: width 0.3s ease-in;
+                    height: 1px;
+                    width: 0;
+                }
+
+                &:hover {
+                    &::after {
+                        width: calc(100% - 2rem);
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            a {
+                padding-bottom: 1.5rem;
+            }
+        }
+
+        @include lg {
+            flex-direction: row;
+            margin: 0 1rem;
+            align-items: center;
+
+            &_active a {
+                &::after {
+                    width: calc(100% - 1rem);
+                }
+            }
+
+            &_active:last-child {
+                a:hover {
+                    &::after {
+                        width: calc(100% - 1rem);
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+                a {
+                    padding-bottom: 1rem;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    &__sub-menu {
+        @include lg {
+            position: absolute;
+            background-color: $WHITE;
+            box-shadow: 0 2px 4px $GRAY_2;
+            animation: fade-in 0.3s ease-out;
+            display: none;
+            top: 100%;
+            left: calc(50% - 120px);
+            z-index: 100;
+            max-width: initial;
+            width: 240px;
+        }
+    }
+
+    &__sub-menu &__item {
+        margin: initial;
+
+        a {
+            display: block;
+            color: $GRAY_3;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+            width: 100%;
+
+            &::after {
+                content: none;
+            }
+        }
+
+        &:last-child {
+            a {
+                padding-bottom: 1rem;
+            }
+        }
+
+        &:first-child {
+            a {
+                padding-top: 1rem;
+            }
+        }
+
+        &_active a,
+        a:hover {
+            color: $GRAY_1;
+        }
+    }
+
+    &__item-sub-menu:hover {
+        .menu__sub-menu {
+            display: block;
+        }
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,58 @@
+@import './../../common/constants';
+
+.header {
+    border-bottom: 1px solid $GRAY_2;
+
+    @include lg {
+        border-bottom: initial;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 72px;
+
+        @include sm {
+            height: 100px;
+        }
+    }
+
+    &__logo-icon {
+        height: 48px;
+        object-fit: contain;
+
+        @include sm {
+            height: 60px;
+        }
+    }
+
+    &__logo-link {
+        text-decoration: none;
+        display: flex;
+    }
+    
+
+    &__logo-text {
+        display: none;
+        @include sm {
+            display: block;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-left: 1rem;
+            margin-bottom: 13px;
+        }
+    }
+
+    &__logo-wrapper {
+        @include sm {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    &__menu {
+        align-self: stretch;
+    }
+}

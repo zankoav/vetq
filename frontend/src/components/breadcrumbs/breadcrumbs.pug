@@ -1,0 +1,10 @@
+mixin breadcrumbs(items)
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list(itemscope itemtype="https://schema.org/BreadcrumbList")
+                each item, index in items
+                    li.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
+                        a.breadcrumbs__link(itemprop="item" title=item.title href=item.href)
+                            meta(itemprop="position" content=index)
+                            span(itemprop="name") #{item.title}
+                

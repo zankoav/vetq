@@ -1,0 +1,26 @@
+mixin menu
+    .menu-wrapp
+        ul.menu
+            li.menu__item
+                a(href="/") Главная	
+            li.menu__item.menu__item-sub-menu
+                a(href="/catalog.html") Каталог
+                ul.menu__sub-menu
+                    li.menu__item
+                        a(href="/product.html") Продукт 1	
+                    li.menu__item
+                        a(href="/product.html") Продукт 2	
+                    li.menu__item.menu__item_active
+                        a(href="/product.html") Продукт 3	
+                    li.menu__item
+                        a(href="/product.html") Продукт 4	
+            li.menu__item.menu__item_active
+                a(href="/contacts.html") Контакты
+        a.menu-wrapp__button(href="javascript:void(0);")
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 32.021 32.021">
+                <g data-name="Group 128" transform="translate(0.042 0.041)">
+                    <circle data-name="Ellipse 4" cx="2.998" cy="2.998" r="2.998" transform="translate(0 12.992)" fill="#161616"></circle>
+                    <circle data-name="Ellipse 5" cx="2.998" cy="2.998" r="2.998" transform="translate(12.992 12.992)" fill="#161616"></circle>
+                    <circle data-name="Ellipse 6" cx="2.998" cy="2.998" r="2.998" transform="translate(25.984 12.992)" fill="#161616"></circle>
+                </g>
+            </svg>

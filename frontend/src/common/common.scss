@@ -1,0 +1,32 @@
+@import './constants';
+@import './reset';
+@include container;
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    .header,
+    .footer {
+        flex-shrink: 0;
+    }
+
+    .main {
+        flex-grow: 1;
+
+        &_flex {
+            display: flex;
+        }
+    }
+}
