@@ -1,9 +1,10 @@
 mixin product(product)
     .product
         .product__image-wrapper
-            img.product__image(src="https://placehold.co/280x320" alt=product.title)
+            img.product__image(src="http://vetq.loc/wp-content/uploads/2023/03/vetatsef_200-560x640.jpg" alt=product.title)
             .product__image-glass 
-                a.product__link(href="/product.html") Подробнее
+                .product__image-glass-content
+                    a.product__link(href="/product.html") Подробнее
         .product__content
             h4.product__title=product.title
             p.product__description=product.description

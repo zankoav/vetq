@@ -1,6 +1,7 @@
 @import './../../common/constants';
 
 .header {
+    position: relative;
     border-bottom: 1px solid $GRAY_2;
 
     @include lg {

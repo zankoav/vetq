@@ -16,15 +16,15 @@
 }
 
 .admin-bar .menu {
-    top: 118px;
+    top: 72px;
 
     @include sm {
-        top: 146px;
+        top: 100px;
     }
 }
 
 .menu {
-    position: fixed;
+    position: absolute;
     background-color: $WHITE;
     top: 72px;
     left: 0;

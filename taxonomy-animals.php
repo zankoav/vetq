@@ -46,8 +46,10 @@ $animals = get_terms( ['taxonomy' => 'animals' ] );
                                     <div class="product">
                                         <div class="product__image-wrapper">
                                             <img class="product__image" src="<?=$productImage?>" alt="<?=get_the_title()?>">
-                                            <div class="product__image-glass"> 
-                                                <a class="product__link" target="_blank" href="<?=get_the_permalink()?>">Подробнее</a>
+                                            <div class="product__image-glass">
+                                                <div class="product__image-glass-content">
+                                                    <a class="product__link" target="_blank" href="<?=get_the_permalink()?>">Подробнее</a>
+                                                </div> 
                                             </div>
                                         </div>
                                         <div class="product__content">

@@ -47,15 +47,26 @@
         color: $GRAY_5;
         margin-top: 1.5rem;
         line-height: 1.5;
+
+        @include editor;
+    }
+
+    &__info {
+        margin-top: 2rem;
     }
 
     &__line {
         display: flex;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
 
-        &_link:hover .product-main__line-title{
-            color: $GRAY_1;
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &_column {
+            flex-direction: column;
+            align-items: initial;
         }
     }
 
@@ -66,60 +77,54 @@
     }
 
     &__line-label {
-        margin-right: 1rem;
-        color: $GRAY_3;
-        text-transform: uppercase;
+        color: $GRAY_1;
+        font-weight: 600;
+        font-size: 16px;
+        margin-right: 0.5rem;
     }
 
-    &__line-title {
-        text-transform: uppercase;
+    &__line-link {
         color: $GRAY_3;
         transition: all 0.3s;
-        font-size: 14px;
+        font-weight: 500;
+        &:hover {
+            color: $GRAY_1;
+        }
     }
 
     &__animals {
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: translateX(-12px);
-        margin-top: -16px;
     }
 
-    &__animal-icon {
-        width: 60px;
-        padding: 8px 4px;
+    &__animal {
+        &::after {
+            content: ',';
+            color: $GRAY_3;
+            margin-right: 0.25rem;
+        }
 
-        @include lg {
-            width: 60px;
-            padding: 8px 4px;
+        &:last-child {
+            &::after {
+                content: '';
+            }
         }
     }
 
     &__instractions {
-        margin-top: -16px;
+        margin-top: 1rem;
     }
 
-    &__instraction-link {
-        padding-bottom: 1rem;
+    &__instraction {
         display: flex;
         align-items: center;
-
-        &:hover .product-main__instraction-label {
-            color: $GRAY_1;
-        }
+        margin-bottom: 0.5rem;
     }
 
     &__instraction-img {
         max-width: 24px;
         flex-shrink: 0;
-        margin-right: 1rem;
-    }
-
-    &__instraction-label {
-        font-size: 14px;
-        text-transform: uppercase;
-        color: $GRAY_3;
-        transition: all 0.3s;
+        margin-right: .5rem;
     }
 }

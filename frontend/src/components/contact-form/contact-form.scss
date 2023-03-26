@@ -1,0 +1,139 @@
+@import './../../common/constants';
+
+.contact-form {
+    padding: 40px 0;
+    color: $GRAY_1;
+
+    @include md {
+        padding: 80px 0;
+        display: flex;
+        max-width: initial;
+        margin: 0 -2rem;
+    }
+
+    &__col {
+        @include md {
+            padding: 0 2rem;
+            max-width: 50%;
+            flex: 1 0 50%;
+        }
+
+        &:last-child {
+            margin-top: 2rem;
+
+            @include md {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    &__description {
+        color: $GRAY_5;
+        margin-top: 1.5rem;
+        line-height: 1.5;
+
+        @include editor;
+    }
+
+    &__info-block {
+        margin-top: 2rem;
+    }
+
+    &__info-title {
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &__info-addres {
+        font-weight: 300;
+        line-height: 2;
+        color: $GRAY_5;
+
+        a {
+            color: $GRAY_5;
+            &:hover {
+                color: $GRAY_1;
+            }
+        }
+    }
+
+    &__error-message {
+        color: $PRIMARY_3;
+        font-weight: 500;
+        line-height: 1.5;
+        font-size: 14px;
+        visibility: hidden;
+    }
+
+    &__input {
+        border: 1px solid $GRAY_6;
+        padding: 1rem 1.75rem;
+        font-size: 14px;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            border-color: $GRAY_1;
+        }
+    }
+
+    &__group {
+        margin-bottom: 0.5rem;
+
+        &_success {
+            display: none;
+            text-align: center;
+            color: $PRIMARY_5;
+            margin-bottom: 0;
+        }
+
+        &_submit {
+            text-align: right;
+            margin-bottom: 0;
+        }
+    }
+
+    &__submit {
+        color: $WHITE;
+        background-color: $GRAY_1;
+        border-radius: 2rem;
+        padding: 1rem 2rem;
+        font-size: 14px;
+        font-weight: 700;
+        transition: all 0.3s;
+        display: inline-block;
+
+        &_process {
+            background-color: $GRAY_3;
+            display: none;
+        }
+    }
+
+    &__submit-succesful {
+        margin: 0 0 1rem;
+        font-weight: 500;
+    }
+
+    &__grid {
+        @include md {
+            display: flex;
+            max-width: initial;
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+        }
+    }
+
+    &__group-col {
+        @include md {
+            padding: 0 0.5rem;
+            max-width: 50%;
+            flex: 1 0 50%;
+        }
+    }
+}

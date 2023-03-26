@@ -1,4 +1,5 @@
-<?php
+<?php if (!defined('ABSPATH')) { exit; }
+
 
 	add_action( 'after_setup_theme', 'vetq_register_main_menu' );
 	function vetq_register_main_menu() {

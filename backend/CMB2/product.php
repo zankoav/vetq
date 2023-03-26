@@ -29,7 +29,7 @@ function register_product_type() {
         'hierarchical'       => false,
         'menu_position'      => 4,
         'menu_icon'          => 'dashicons-products',
-        'supports'           => array('title', 'editor', 'thumbnail')
+        'supports'           => array('title')
     ));
 
     register_taxonomy('veterinary', array('product'), array(
@@ -102,7 +102,7 @@ add_action('cmb2_admin_init', function (){
         'name' => __('Краткое описание', 'vetq'),
         'desc' => __('Краткое описание', 'vetq'),
         'id'   => 'product_description',
-        'type' => 'textarea',
+        'type' => 'wysiwyg',
     ));
 
     $cmb->add_field(array(

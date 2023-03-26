@@ -17,6 +17,36 @@ function cmb2_contacts_page() {
         'type' => 'file',
     ));
 
+    $cmb_options->add_field(array(
+        'name' => __('Подзаголовок', 'vetq'),
+        'id'   => 'contacts_subtitle',
+        'type' => 'text',
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => __('Основной текст', 'vetq'),
+        'id'   => 'contacts_content',
+        'type' => 'wysiwyg',
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => __('Адрес', 'vetq'),
+        'id'   => 'contacts_address',
+        'type' => 'text',
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => __('Телефон', 'vetq'),
+        'id'   => 'contacts_phone',
+        'type' => 'text',
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => __('Email', 'vetq'),
+        'id'   => 'contacts_email',
+        'type' => 'text',
+    ));
+
 }
 
 add_action('cmb2_admin_init', 'cmb2_contacts_page');

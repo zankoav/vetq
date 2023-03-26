@@ -22,8 +22,16 @@
         background-color: rgba($GRAY_3, 0.25);
         transition: all 0.3s;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        
+    }
+
+    &__image-glass-content{
+        width: 100%;
+        display: flex;
         justify-content: center;
+        background-color: rgba($WHITE, 0.5);
+        padding: 1.5rem;
     }
 
     &:hover &__image-glass {
@@ -33,18 +41,17 @@
     &__link {
         color: $WHITE;
         background-color: $GRAY_1;
-        box-shadow: 0 1px 2px $GRAY_3;
-        border-radius: 1.25rem;
-        padding: 0.75rem 1.5rem;
+        border-radius: 2rem;
+        padding: 1rem 2rem;
         font-size: 12px;
+        letter-spacing: 1px;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 700;
         transition: all 0.3s;
         display: inline-block;
-        margin-bottom: 1.5rem;
 
         &:hover {
-            background-color: $PRIMARY_1;
+            background-color: $PRIMARY_2;
         }
     }
 
