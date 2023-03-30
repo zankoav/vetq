@@ -1,0 +1,8 @@
+import './../common/common.scss'
+import './../components/header/header'
+import './../components/footer/footer'
+import './../components/menu/menu'
+import './../components/find-out-more/find-out-more'
+import './../components/advantages/advantages'
+import './../components/swiper-banner/swiper-banner'
+import './../components/button/button'

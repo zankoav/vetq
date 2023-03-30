@@ -1,0 +1,102 @@
+@import './../../common/constants';
+
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: initial;
+    padding-bottom: 6rem;
+
+    @include md {
+        margin: 0 -2rem;
+    }
+
+    @include xl {
+        margin: 0 -3rem;
+    }
+
+    &__col {
+        padding: 0 0 2rem;
+        max-width: 100%;
+        flex: 1 0 100%;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        @include md {
+            padding: 0 2rem 0;
+            max-width: 50%;
+            flex: 1 0 50%;
+            padding-bottom: 6rem;
+        }
+
+        @include xl {
+            padding: 0 3rem 0;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+
+        @include md {
+            margin-bottom: 0;
+        }
+    }
+
+    &__content {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__sub-title {
+        color: $GRAY_3;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        color: $GRAY_1;
+        font-size: 40px;
+        line-height: 1;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    &__description {
+        color: $GRAY_1;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+
+    &__list {
+        margin-bottom: 2rem;
+    }
+
+    &__list-item {
+        margin-bottom: 1rem;
+        font-size: 16px;
+        font-weight: 300;
+        display: flex;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url('./../../img/check-black.svg') no-repeat;
+            background-size: contain;
+            margin-right: 0.5rem;
+        }
+    }
+}

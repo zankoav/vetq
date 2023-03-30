@@ -1,0 +1,46 @@
+@import './../../common/constants';
+
+.button {
+    color: $WHITE;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background: $GRAY_1;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+        margin-left: 0.5rem;
+        background: url('./../../img/chevron-right-white.svg') no-repeat;
+        background-size: contain;
+        margin-top: 1px;
+    }
+
+    &:hover {
+        &::after {
+            animation: transit 0.3s;
+        }
+    }
+}
+
+@keyframes transit {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(8px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

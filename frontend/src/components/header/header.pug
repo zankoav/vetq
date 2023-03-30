@@ -1,10 +1,10 @@
-mixin header
+mixin header(hd)
     header.header
-        .container
+        div(class= hd ? "container container_hd": "container")
             .header__container
                 .header__logo-wrapper
                     a.header__logo-link(href='/')
-                        img.header__logo-icon(src=require('./img/main-logo.svg').default, alt="VetQ Logo")
+                        img.header__logo-icon(src=require('@img/main-logo.svg'), alt="VetQ Logo")
                     .header__logo-text Ветеринарные препараты
                 nav.header__menu
                     +menu()

@@ -43,7 +43,6 @@
     }
 
     &__aside-list-item-link {
-        display: block;
         color: $GRAY_3;
         font-size: 12px;
         text-transform: uppercase;
@@ -63,13 +62,14 @@
     }
 
     &__aside-list-item-icon {
-        width: 24px;
+        width: 28px;
+        height: 28px;
         margin-right: 1rem;
         flex-shrink: 0;
 
-        &_animal {
-            width: 32px;
-            margin-right: 0.5rem;
+        &_small {
+            width: 24px;
+            height: 24px;
         }
     }
 
@@ -136,7 +136,7 @@
             flex: 1 0 33.3333%;
         }
 
-        &_hide{
+        &_hide {
             display: none;
         }
     }

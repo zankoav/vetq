@@ -1,0 +1,7 @@
+import './../common/common.scss'
+import './../components/header/header'
+import './../components/breadcrumbs/breadcrumbs'
+import './../components/footer/footer'
+import './../components/menu/menu'
+import './../components/product-main/product-main'
+import './../components/accordion-mixed/accordion-mixed'

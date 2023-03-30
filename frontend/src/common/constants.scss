@@ -80,6 +80,7 @@ $MEDIA: (
 // CONTAINER START:
 @mixin container() {
     $MAX-WIDTH_LG: 1236px;
+    $MAX-WIDTH_HD: calc(100% - 2rem);
 
     .container {
         padding: 0 1.5rem;
@@ -91,6 +92,12 @@ $MEDIA: (
             padding: 0 1rem;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        &_hd {
+            @include hd {
+                max-width: $MAX-WIDTH_HD;
+            }
         }
     }
 }

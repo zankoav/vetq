@@ -1,0 +1,15 @@
+include ./../common/mixins
+doctype html
+html
+    head
+        +meta()
+    body
+        .app
+            +header(1)
+            main.main 
+                .container.container_hd
+                    +swiper-banner()
+                .container
+                    +find-out-more()
+                    +advantages()
+            +footer()

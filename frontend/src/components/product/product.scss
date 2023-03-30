@@ -23,36 +23,18 @@
         transition: all 0.3s;
         display: flex;
         align-items: center;
-        
     }
 
-    &__image-glass-content{
+    &__image-glass-content {
         width: 100%;
         display: flex;
         justify-content: center;
         background-color: rgba($WHITE, 0.5);
-        padding: 1.5rem;
+        padding: 1rem;
     }
 
     &:hover &__image-glass {
         height: 100%;
-    }
-
-    &__link {
-        color: $WHITE;
-        background-color: $GRAY_1;
-        border-radius: 2rem;
-        padding: 1rem 2rem;
-        font-size: 12px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-weight: 700;
-        transition: all 0.3s;
-        display: inline-block;
-
-        &:hover {
-            background-color: $PRIMARY_2;
-        }
     }
 
     &__content {
@@ -86,12 +68,8 @@
     }
 
     &__animal-icon {
-        width: 56px;
-        padding: 8px 4px;
-
-        @include lg {
-            width: 40px;
-            padding: 8px 4px;
-        }
+        height: 28px;
+        width: 28px;
+        margin: 1rem 0.5rem 0;
     }
 }

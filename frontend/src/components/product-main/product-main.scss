@@ -120,11 +120,16 @@
         display: flex;
         align-items: center;
         margin-bottom: 0.5rem;
-    }
 
-    &__instraction-img {
-        max-width: 24px;
-        flex-shrink: 0;
-        margin-right: .5rem;
+        &::before {
+            content: '';
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            flex-shrink: 0;
+            margin-right: 0.5rem;
+            background: url('./../../img/book-open.svg') no-repeat center;
+            background-size: contain;
+        }
     }
 }

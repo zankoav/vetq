@@ -87,8 +87,10 @@ function my_commmunity_post_link( $post_link, $id = 0 ){
 }
 add_filter( 'post_type_link', 'my_commmunity_post_link', 1, 3 );
 
-add_action('cmb2_admin_init', function (){
+add_action('cmb2_admin_init', 'cmb2_product');
 
+function cmb2_product(){
+    
     $cmb = new_cmb2_box(array(
         'id'           => 'product_settings_id',
         'title'        => 'Настройки продукта',
@@ -173,7 +175,29 @@ add_action('cmb2_admin_init', function (){
         'type'         => 'wysiwyg'
     ));
 
-    
+}
 
-    
-});
+add_action('cmb2_admin_init', 'animals_cmb2');
+
+function animals_cmb2(){
+    $cmb = new_cmb2_box(array(
+        'id'           => 'animal_settings_id',
+        'title'        => 'Настройки категории',
+        'object_types' => array('term'),
+        'taxonomies' => array('animals'),
+        'context'      => 'normal',
+        'priority'     => 'high',
+        'show_names'   => true,
+    ));
+
+    $cmb->add_field( array(
+		'name' => esc_html__( 'Картинка', 'vetq' ),
+		'desc' => esc_html__( 'Будьте внимательны, формат картинки очень важен', 'vetq' ),
+		'id'   => 'animal_image',
+		'type' => 'file',
+        'preview_size' => array( 100, 100 ),
+        'options' => array(
+            'url' => false
+        ),
+	) );
+}

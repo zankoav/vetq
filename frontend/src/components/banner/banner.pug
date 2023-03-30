@@ -1,7 +1,7 @@
-- var img = require('./img/contact-us-title-img.jpg')
+- var img = require('@img/contact-us-title-img.jpg')
 mixin banner(model)
     .banner 
-        img.banner__icon(src=img.default, alt=model.title)
+        img.banner__icon(src=img, alt=model.title)
         .container.banner__content
             h1.banner__title=model.title
             .hh
