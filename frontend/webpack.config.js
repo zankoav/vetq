@@ -99,7 +99,6 @@ module.exports = (env) => {
                 },
                 {
                     test: /\.(css|scss)$/,
-                    // exclude: /(node_modules)/,
                     use: ['style-loader', 'css-loader', 'sass-loader']
                 },
                 {
@@ -128,7 +127,7 @@ module.exports = (env) => {
     if (env?.production) {
         result.mode = 'production'
         result.devtool = false
-        result.output.publicPath = `/wp-content/themes/${WP_THEME}/frontend/build`
+        result.output.publicPath = `/wp-content/themes/${WP_THEME}/frontend/build/`
     }
     return result
 }

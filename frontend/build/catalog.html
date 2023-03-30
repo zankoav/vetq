@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>Catalog</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <style>
+            .app {
+                display: none;
+            }
+        </style>
+        <script
+            defer
+            src="/wp-content/themes/vetq/frontend/build/js/runtime.56148a78689701a67679.js"></script>
+        <script
+            defer
+            src="/wp-content/themes/vetq/frontend/build/js/vendors.4971439f1ae5140d179c.js"></script>
+        <script
+            defer
+            src="/wp-content/themes/vetq/frontend/build/js/catalog.26d1371d965ea663b108.js"></script>
+    </head>
+    <body>
+        <div class="app">
+            <header class="header">
+                <div class="container">
+                    <div class="header__container">
+                        <div class="header__logo-wrapper">
+                            <a class="header__logo-link" href="/"
+                                ><img
+                                    class="header__logo-icon"
+                                    src="/wp-content/themes/vetq/frontend/build/img/9ff9b4adb4b02f29b759.svg"
+                                    alt="VetQ Logo"
+                            /></a>
+                            <div class="header__logo-text">Ветеринарные препараты</div>
+                        </div>
+                        <nav class="header__menu">
+                            <div class="menu-wrapp">
+                                <ul class="menu">
+                                    <li class="menu__item"><a href="/">Главная </a></li>
+                                    <li class="menu__item menu__item-sub-menu">
+                                        <a href="/catalog.html">Каталог</a>
+                                        <ul class="menu__sub-menu">
+                                            <li class="menu__item">
+                                                <a href="/product.html">Продукт 1 </a>
+                                            </li>
+                                            <li class="menu__item">
+                                                <a href="/product.html">Продукт 2 </a>
+                                            </li>
+                                            <li class="menu__item menu__item_active">
+                                                <a href="/product.html">Продукт 3 </a>
+                                            </li>
+                                            <li class="menu__item">
+                                                <a href="/product.html">Продукт 4 </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__item menu__item_active">
+                                        <a href="/contacts.html">Контакты</a>
+                                    </li>
+                                </ul>
+                                <a class="menu-wrapp__button" href="javascript:void(0);"
+                                    ><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 32.021 32.021">
+                                        <g data-name="Group 128" transform="translate(0.042 0.041)">
+                                            <circle
+                                                data-name="Ellipse 4"
+                                                cx="2.998"
+                                                cy="2.998"
+                                                r="2.998"
+                                                transform="translate(0 12.992)"
+                                                fill="#161616"></circle>
+                                            <circle
+                                                data-name="Ellipse 5"
+                                                cx="2.998"
+                                                cy="2.998"
+                                                r="2.998"
+                                                transform="translate(12.992 12.992)"
+                                                fill="#161616"></circle>
+                                            <circle
+                                                data-name="Ellipse 6"
+                                                cx="2.998"
+                                                cy="2.998"
+                                                r="2.998"
+                                                transform="translate(25.984 12.992)"
+                                                fill="#161616"></circle>
+                                        </g></svg
+                                ></a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="breadcrumbs">
+                    <div class="container">
+                        <ul
+                            class="breadcrumbs__list"
+                            itemscope
+                            itemtype="https://schema.org/BreadcrumbList">
+                            <li
+                                class="breadcrumbs__item"
+                                itemprop="itemListElement"
+                                itemscope
+                                itemtype="https://schema.org/ListItem">
+                                <a
+                                    class="breadcrumbs__link"
+                                    itemprop="item"
+                                    title="Главная"
+                                    href="/"
+                                    ><meta itemprop="position" content="0" /><span itemprop="name"
+                                        >Главная</span
+                                    ></a
+                                >
+                            </li>
+                            <li
+                                class="breadcrumbs__item"
+                                itemprop="itemListElement"
+                                itemscope
+                                itemtype="https://schema.org/ListItem">
+                                <a
+                                    class="breadcrumbs__link"
+                                    itemprop="item"
+                                    title="Каталог"
+                                    href="/catalog.html"
+                                    ><meta itemprop="position" content="1" /><span itemprop="name"
+                                        >Каталог</span
+                                    ></a
+                                >
+                            </li>
+                            <li
+                                class="breadcrumbs__item"
+                                itemprop="itemListElement"
+                                itemscope
+                                itemtype="https://schema.org/ListItem">
+                                <a
+                                    class="breadcrumbs__link"
+                                    itemprop="item"
+                                    title="Антибактериальные препараты"
+                                    href="/catalog.html"
+                                    ><meta itemprop="position" content="2" /><span itemprop="name"
+                                        >Антибактериальные препараты</span
+                                    ></a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="catalog">
+                        <div class="catalog__main">
+                            <div class="catalog__search">
+                                <h1 class="catalog__title">Антибактериальные препараты</h1>
+                                <div class="catalog__search-block">
+                                    <svg
+                                        class="catalog__search-icon"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21 21L15 15L21 21ZM17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                                            stroke="#9b9b9b"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round" /></svg
+                                    ><input
+                                        class="catalog__search-input"
+                                        placeholder="Поиск препарата" />
+                                </div>
+                            </div>
+                            <div class="catalog__products">
+                                <div class="catalog__product">
+                                    <div class="product">
+                                        <div class="product__image-wrapper">
+                                            <img
+                                                class="product__image"
+                                                src="http://vetq.loc/wp-content/uploads/2023/03/vetatsef_200-560x640.jpg"
+                                                alt="Кальцемаг" />
+                                            <div class="product__image-glass">
+                                                <div class="product__image-glass-content">
+                                                    <a class="button" href="/product.html"
+                                                        >Подробнее</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <h4 class="product__title">Кальцемаг</h4>
+                                            <p class="product__description">
+                                                Суспензия для инъекций
+                                            </p>
+                                            <ul class="product__animals">
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/3f43fe1d568a682a307d.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/aafd5761acb1c2bf3b3f.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__product">
+                                    <div class="product">
+                                        <div class="product__image-wrapper">
+                                            <img
+                                                class="product__image"
+                                                src="http://vetq.loc/wp-content/uploads/2023/03/vetatsef_200-560x640.jpg"
+                                                alt="Доксивет" />
+                                            <div class="product__image-glass">
+                                                <div class="product__image-glass-content">
+                                                    <a class="button" href="/product.html"
+                                                        >Подробнее</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <h4 class="product__title">Доксивет</h4>
+                                            <p class="product__description">
+                                                Водорастворимый порошок для орального применения
+                                            </p>
+                                            <ul class="product__animals">
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/3f43fe1d568a682a307d.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/aafd5761acb1c2bf3b3f.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__product">
+                                    <div class="product">
+                                        <div class="product__image-wrapper">
+                                            <img
+                                                class="product__image"
+                                                src="http://vetq.loc/wp-content/uploads/2023/03/vetatsef_200-560x640.jpg"
+                                                alt="Ферголин" />
+                                            <div class="product__image-glass">
+                                                <div class="product__image-glass-content">
+                                                    <a class="button" href="/product.html"
+                                                        >Подробнее</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <h4 class="product__title">Ферголин</h4>
+                                            <p class="product__description">
+                                                Суспензия для инъекций
+                                            </p>
+                                            <ul class="product__animals">
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/3f43fe1d568a682a307d.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/aafd5761acb1c2bf3b3f.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__product">
+                                    <div class="product">
+                                        <div class="product__image-wrapper">
+                                            <img
+                                                class="product__image"
+                                                src="http://vetq.loc/wp-content/uploads/2023/03/vetatsef_200-560x640.jpg"
+                                                alt="Азитронит" />
+                                            <div class="product__image-glass">
+                                                <div class="product__image-glass-content">
+                                                    <a class="button" href="/product.html"
+                                                        >Подробнее</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <h4 class="product__title">Азитронит</h4>
+                                            <p class="product__description">Раствор для инъекций</p>
+                                            <ul class="product__animals">
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/3f43fe1d568a682a307d.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/aafd5761acb1c2bf3b3f.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__product">
+                                    <div class="product">
+                                        <div class="product__image-wrapper">
+                                            <img
+                                                class="product__image"
+                                                src="http://vetq.loc/wp-content/uploads/2023/03/vetatsef_200-560x640.jpg"
+                                                alt="Бенстреп" />
+                                            <div class="product__image-glass">
+                                                <div class="product__image-glass-content">
+                                                    <a class="button" href="/product.html"
+                                                        >Подробнее</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <h4 class="product__title">Бенстреп</h4>
+                                            <p class="product__description">
+                                                Порошок для орального применения
+                                            </p>
+                                            <ul class="product__animals">
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/3f43fe1d568a682a307d.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/aafd5761acb1c2bf3b3f.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__product">
+                                    <div class="product">
+                                        <div class="product__image-wrapper">
+                                            <img
+                                                class="product__image"
+                                                src="http://vetq.loc/wp-content/uploads/2023/03/vetatsef_200-560x640.jpg"
+                                                alt="Гентам БТ" />
+                                            <div class="product__image-glass">
+                                                <div class="product__image-glass-content">
+                                                    <a class="button" href="/product.html"
+                                                        >Подробнее</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <h4 class="product__title">Гентам БТ</h4>
+                                            <p class="product__description">Раствор для инъекций</p>
+                                            <ul class="product__animals">
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/3f43fe1d568a682a307d.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                                <li class="product__animal">
+                                                    <a
+                                                        class="product__animal-link"
+                                                        href="/catalog.html"
+                                                        ><img
+                                                            class="product__animal-icon"
+                                                            src="/wp-content/themes/vetq/frontend/build/img/aafd5761acb1c2bf3b3f.svg"
+                                                            alt=""
+                                                    /></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="catalog__aside">
+                            <div class="catalog__aside-block">
+                                <h4 class="catalog__aside-title">Фармацевтическая группа</h4>
+                                <ul class="catalog__aside-list">
+                                    <li class="catalog__aside-list-item">
+                                        <a class="catalog__aside-list-item-link" href="#"
+                                            ><img
+                                                class="catalog__aside-list-item-icon catalog__aside-list-item-icon_small"
+                                                src="/wp-content/themes/vetq/frontend/build/img/05ff486d63ba6bc409e8.svg"
+                                                alt="" /><span
+                                                class="catalog__aside-list-item-link-title"
+                                                >Антибактериальные препараты</span
+                                            ></a
+                                        >
+                                    </li>
+                                    <li class="catalog__aside-list-item">
+                                        <a class="catalog__aside-list-item-link" href="#">
+                                            <img
+                                                class="catalog__aside-list-item-icon catalog__aside-list-item-icon_small"
+                                                src="/wp-content/themes/vetq/frontend/build/img/947009149a04f46641f4.svg"
+                                                alt="" /><span
+                                                class="catalog__aside-list-item-link-title"
+                                                >Витаминно-минеральные препараты</span
+                                            ></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="catalog__aside-block">
+                                <h4 class="catalog__aside-title">Вид животного</h4>
+                                <ul class="catalog__aside-list">
+                                    <li class="catalog__aside-list-item">
+                                        <a
+                                            class="catalog__aside-list-item-link catalog__aside-list-item-link_animal"
+                                            href="#">
+                                            <img
+                                                class="catalog__aside-list-item-icon"
+                                                src="/wp-content/themes/vetq/frontend/build/img/3f43fe1d568a682a307d.svg"
+                                                alt="" /><span
+                                                class="catalog__aside-list-item-link-title"
+                                                >Куры</span
+                                            ></a
+                                        >
+                                    </li>
+                                    <li class="catalog__aside-list-item">
+                                        <a
+                                            class="catalog__aside-list-item-link catalog__aside-list-item-link_animal"
+                                            href="#"
+                                            ><img
+                                                class="catalog__aside-list-item-icon"
+                                                src="/wp-content/themes/vetq/frontend/build/img/aafd5761acb1c2bf3b3f.svg"
+                                                alt="" /><span
+                                                class="catalog__aside-list-item-link-title"
+                                                >Коровы</span
+                                            ></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__logo-wrapper">
+                        <a class="footer__logo-link" href="/"
+                            ><img
+                                class="footer__logo-icon"
+                                src="/wp-content/themes/vetq/frontend/build/img/b785626c99d7562816a2.svg"
+                                alt="VetQ Logo"
+                        /></a>
+                        <div class="footer__logo-text">Ветеринарные препараты</div>
+                    </div>
+                    <p class="footer__description">
+                        По любым дополнительным вопросам, пожалуйста, не стесняйтесь отправлять нам
+                        электронное письмо по адресу info@krasnagorka.by
+                    </p>
+                    <p class="footer__copyed">© Все права защищены 2023</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

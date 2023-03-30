@@ -1,10 +1,15 @@
-<?php if (!defined('ABSPATH')) { exit; }?>
+<?php if (!defined('ABSPATH')) { exit; }
+    $header_class = 'container';
+    if(is_page_template('template-page-home.php')){
+        $header_class .= ' container_hd';
+    }
+?>
 
 <header class="header">
-    <div class="container">
+    <div class="<?=$header_class?>">
         <div class="header__container">
             <div class="header__logo-wrapper">
-                <a class="header__logo-link" href="/"><img class="header__logo-icon" src="/wp-content/themes/vetq/frontend/build/img/main-logo.9ff9b4.svg" alt="VetQ Logo"></a>
+                <a class="header__logo-link" href="/"><img class="header__logo-icon" src="/wp-content/themes/vetq/frontend/build/img/9ff9b4adb4b02f29b759.svg" alt="VetQ Logo"></a>
                 <div class="header__logo-text">Ветеринарные препараты</div>
             </div>
             <nav class="header__menu">

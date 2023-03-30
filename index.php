@@ -15,8 +15,4 @@ get_header('vetq'); ?>
         <?php get_template_part("backend/components/footer");?>
     </div>
 <?php 
-get_footer('vetq', [
-    'data' => [
-        'page_name' => 'product'
-    ]
-]);
+get_footer('vetq');

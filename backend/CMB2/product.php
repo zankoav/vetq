@@ -201,3 +201,28 @@ function animals_cmb2(){
         ),
 	) );
 }
+
+add_action('cmb2_admin_init', 'veterinary_cmb2');
+
+function veterinary_cmb2(){
+    $cmb = new_cmb2_box(array(
+        'id'           => 'veterinary_settings_id',
+        'title'        => 'Настройки категории',
+        'object_types' => array('term'),
+        'taxonomies' => array('veterinary'),
+        'context'      => 'normal',
+        'priority'     => 'high',
+        'show_names'   => true,
+    ));
+
+    $cmb->add_field( array(
+		'name' => esc_html__( 'Картинка', 'vetq' ),
+		'desc' => esc_html__( 'Будьте внимательны, формат картинки очень важен', 'vetq' ),
+		'id'   => 'veterinary_image',
+		'type' => 'file',
+        'preview_size' => array( 100, 100 ),
+        'options' => array(
+            'url' => false
+        ),
+	) );
+}

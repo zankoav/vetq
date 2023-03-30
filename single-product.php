@@ -47,11 +47,7 @@ foreach ( (array) $tabs as $key => $entry ) {
     }
 }
 
-get_header('vetq', [
-    'data' => [
-        'page_name' => 'product'
-    ]
-]); 
+get_header('vetq'); 
 ?>
     <div class="app">
         <?php get_template_part("backend/components/header"); ?>
@@ -89,8 +85,7 @@ get_header('vetq', [
                                 <ul class="product-main__instractions">
                                     <?php foreach($instractionsResult as $instraction):?>
                                         <li class="product-main__instraction">
-                                            <img class="product-main__instraction-img" src="/wp-content/themes/vetq/frontend/build/img/book-open.75d1d7.svg" alt="document">
-                                            <a class="product-main__line-link" href="<?=$instraction['pdf']?>"><?=$instraction['title']?></a>
+                                            <a class="product-main__line-link" href="<?=$instraction['pdf']?>" target="_blank"><?=$instraction['title']?></a>
                                         </li>
                                     <?php endforeach;?>
                                 </ul>
@@ -125,8 +120,4 @@ get_header('vetq', [
         <?php get_template_part("backend/components/footer");?>
     </div>
 <?php 
-get_footer('vetq', [
-    'data' => [
-        'page_name' => 'product'
-    ]
-]);
+get_footer('vetq');

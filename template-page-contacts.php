@@ -19,15 +19,11 @@ $address = $contactsSettings['contacts_address'];
 $phone = $contactsSettings['contacts_phone'];
 $email = $contactsSettings['contacts_email'];
 
-get_header('vetq', [
-    'data' => [
-        'page_name' => 'contacts'
-    ]
-]); 
+get_header('vetq'); 
 
 ?>
     <script type="text/javascript">
-        const landing_ajax = "<?php echo admin_url('admin-ajax.php'); ?>";
+        const landing_ajax = "<?= admin_url('admin-ajax.php'); ?>";
     </script>
     <div class="app">
         <?php get_template_part("backend/components/header"); ?>
@@ -81,8 +77,4 @@ get_header('vetq', [
         <?php get_template_part("backend/components/footer");?>
     </div>
 <?php 
-get_footer('vetq', [
-    'data' => [
-        'page_name' => 'contacts'
-    ]
-]);
+get_footer('vetq');
