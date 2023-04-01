@@ -137,10 +137,10 @@
             animation: fade-in 0.3s ease-out;
             display: none;
             top: 100%;
-            left: calc(50% - 120px);
+            left: calc(50% - 140px);
             z-index: 100;
             max-width: initial;
-            width: 260px;
+            width: 280px;
         }
     }
 
@@ -152,7 +152,7 @@
             color: $GRAY_3;
             font-size: 12px;
             text-transform: uppercase;
-            padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+            padding: 0.5rem 2.5rem;
             width: 100%;
 
             &::after {

@@ -4,6 +4,10 @@
 
 ## Release Notes:
 
+- v.1.0.2
+  - Bug fix at sub menu width
+
+---
 - v.1.0.1
   - Bug fix at sub menu
 
