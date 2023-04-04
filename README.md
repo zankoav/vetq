@@ -4,6 +4,10 @@
 
 ## Release Notes:
 
+- v.1.0.3
+  - Added favicon
+
+---
 - v.1.0.2
   - Bug fix at sub menu width
 
