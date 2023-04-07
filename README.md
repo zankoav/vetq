@@ -4,6 +4,10 @@
 
 ## Release Notes:
 
+- v.1.0.4
+  - Added sub and sup styles
+
+---
 - v.1.0.3
   - Added favicon
 
