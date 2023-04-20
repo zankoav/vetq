@@ -2,4 +2,3 @@ node_modules
 package-lock.json
 .pmdCache
 .DS_Store
-backend/breadcrumbs.php

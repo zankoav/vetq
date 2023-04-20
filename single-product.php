@@ -106,7 +106,7 @@ get_header('vetq');
                                 <span class="accordion-mixed__tab-label"><?=$tab['title']?></span>
                                 <img
                                     class="accordion-mixed__tab-icon"
-                                    src="/wp-content/themes/vetq/frontend/build/img/chevron-down.e81209.svg"
+                                    src="/wp-content/themes/vetq/frontend/build/img/e812095e36191b8d141d.svg"
                                     alt="arrow" />
                             </div>
                             <div class="accordion-mixed__content <?= $i == 0 ? 'accordion-mixed__content_active' : ''?>" data-mixed-tab="<?=$i?>">
