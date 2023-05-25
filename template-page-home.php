@@ -46,7 +46,9 @@ $advantage = [
     'title' => $home_settings['home_advantages_title'] ?? '',
     'image' => $home_settings['home_advantages_banner'] ?? '',
     'description' => $home_settings['home_advantages_description'] ?? '',
-    'benefits' => $home_settings['home_advantages_benefits'] ?? []
+    'benefits' => $home_settings['home_advantages_benefits'] ?? [],
+    'button_title' => $home_settings['home_advantages_button_title'] ?? '',
+    'button_link' => $home_settings['home_advantages_button_link'] ?? ''
 ];
 
 
@@ -108,7 +110,7 @@ get_header('vetq');
                                         <li class="advantages__list-item"><?=$benefit?></li>
                                     <?php endforeach;?>
                                 </ul>
-                                <a class="button" href="/catalog.html">Каталог</a>
+                                <a class="button" href="<?=$advantage['button_link'];?>"><?=$advantage['button_title'];?></a>
                             </div>
                         </div>
                     </div>

@@ -161,4 +161,16 @@ add_action('cmb2_admin_init', function(){
         'type' => 'text',
         'repeatable' => true
     ));
+
+    $cmb_advantages->add_field(array(
+        'name' => __('Заголовок кнопки', 'vetq'),
+        'id'   => 'home_advantages_button_title',
+        'type' => 'text'
+    ));
+
+    $cmb_advantages->add_field(array(
+        'name' => __('Url кнопки', 'vetq'),
+        'id'   => 'home_advantages_button_link',
+        'type' => 'text_url'
+    ));
 });
