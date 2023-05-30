@@ -84,6 +84,7 @@
     }
 
     &__group {
+        position: relative;
         margin-bottom: 0.5rem;
 
         &_success {
@@ -96,6 +97,20 @@
         &_submit {
             text-align: right;
             margin-bottom: 0;
+        }
+
+        &_required {
+            &:after {
+                content: '';
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                background-color: $PRIMARY_3;
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                z-index: 1;
+            }
         }
     }
 
@@ -134,6 +149,21 @@
             padding: 0 0.5rem;
             max-width: 50%;
             flex: 1 0 50%;
+        }
+    }
+
+    &__select {
+        border: 1px solid $GRAY_6;
+        padding: 1rem 1.75rem;
+        font-size: 14px;
+        width: 100%;
+        -moz-appearance: none; /* Firefox */
+        -webkit-appearance: none; /* Safari and Chrome */
+        appearance: none;
+
+        &:focus {
+            outline: none;
+            border-color: $GRAY_1;
         }
     }
 }

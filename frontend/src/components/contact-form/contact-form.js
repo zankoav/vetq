@@ -1,6 +1,8 @@
 import './contact-form.scss'
 import $ from 'jquery'
 
+//  обязательное только ФИО, телефон, email, название предприятия
+
 let error
 
 $('.contact-form__submit_main').on('click', function () {
@@ -8,12 +10,20 @@ $('.contact-form__submit_main').on('click', function () {
         action: 'post_message'
     }
     error = false
-    $('.contact-form__input').each(function () {
+    $('.contact-form__input, .contact-form__select').each(function () {
         hideError(this)
     })
     $('.contact-form__input').each(function () {
         data[this.name] = this.value
-        if (!data[this.name]) {
+        if ($(this).parent().hasClass('contact-form__group_required') && !data[this.name]) {
+            showError(this)
+            return
+        }
+    })
+
+    $('.contact-form__select').each(function () {
+        data[this.name] = $(this).val()
+        if ($(this).parent().hasClass('contact-form__group_required') && !data[this.name]) {
             showError(this)
             return
         }
@@ -22,7 +32,6 @@ $('.contact-form__submit_main').on('click', function () {
     if (!error) {
         $('.contact-form__submit_main').hide()
         $('.contact-form__submit_process').show().attr('style', 'display: inline-block')
-
         $.ajax({
             type: 'POST',
             url: landing_ajax,
@@ -48,6 +57,10 @@ $('.contact-form__submit-again').on('click', function () {
 
     $('.contact-form__input').each(function () {
         this.value = ''
+    })
+
+    $('.contact-form__select').each(function () {
+        $(this).val('')
     })
 })
 

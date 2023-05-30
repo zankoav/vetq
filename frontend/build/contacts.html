@@ -1,9 +1,265 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0, width=device-width"><title>Contacts</title><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"><style>.app{display:none;}</style><script defer src="/wp-content/themes/vetq/frontend/build/js/runtime.56148a78689701a67679.js"></script><script defer src="/wp-content/themes/vetq/frontend/build/js/vendors.4971439f1ae5140d179c.js"></script><script defer src="/wp-content/themes/vetq/frontend/build/js/contacts.33f1b9d6d8483ecdb500.js"></script></head><body><div class="app"><header class="header"><div class="container"><div class="header__container"><div class="header__logo-wrapper"><a class="header__logo-link" href="/"><img class="header__logo-icon" src="/wp-content/themes/vetq/frontend/build/img/9ff9b4adb4b02f29b759.svg" alt="VetQ Logo"></a><div class="header__logo-text">Ветеринарные препараты</div></div><nav class="header__menu"><div class="menu-wrapp"><ul class="menu"><li class="menu__item"><a href="/">Главная	</a></li><li class="menu__item menu__item-sub-menu"><a href="/catalog.html">Каталог</a><ul class="menu__sub-menu"><li class="menu__item"><a href="/product.html">Продукт 1	</a></li><li class="menu__item"><a href="/product.html">Продукт 2	</a></li><li class="menu__item menu__item_active"><a href="/product.html">Продукт 3	</a></li><li class="menu__item"><a href="/product.html">Продукт 4	</a></li></ul></li><li class="menu__item menu__item_active"><a href="/contacts.html">Контакты</a></li></ul><a class="menu-wrapp__button" href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 32.021 32.021">
-<g data-name="Group 128" transform="translate(0.042 0.041)">
-<circle data-name="Ellipse 4" cx="2.998" cy="2.998" r="2.998" transform="translate(0 12.992)" fill="#161616"></circle>
-<circle data-name="Ellipse 5" cx="2.998" cy="2.998" r="2.998" transform="translate(12.992 12.992)" fill="#161616"></circle>
-<circle data-name="Ellipse 6" cx="2.998" cy="2.998" r="2.998" transform="translate(25.984 12.992)" fill="#161616"></circle>
-</g>
-</svg></a></div></nav></div></div></header><main class="main"> <div class="banner"> <img class="banner__icon" src="/wp-content/themes/vetq/frontend/build/img/73a28ca3cc890aace5cb.jpg" alt="Контакты"><div class="container banner__content"><h1 class="banner__title">Контакты</h1><div class="hh"></div></div></div><div class="container"><div class="contact-form"> <div class="contact-form__col"><h2 class="contact-form__title">У Вас остались вопросы?</h2><div class="contact-form__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ad dicta perferendis nihil placeat at inventore deleniti magni in illo.</div><div class="contact-form__info-block"><div class="contact-form__info-title"> Офис</div><address class="contact-form__info-addres">Abbot Kinney Blvd. Copenhagen CA 90291<br><a href="tel:+1123456789">+1123456789</a><br><a href="mailto:jim@rock.com">hygge@qodeinteractive.com</a></address></div></div><div class="contact-form__col"><div class="contact-form__group"><input class="contact-form__input" name="name" placeholder="Имя"><p class="contact-form__error-message">Введите свое имя !</p></div><div class="contact-form__grid"> <div class="contact-form__group-col"><div class="contact-form__group"><input class="contact-form__input" name="phone" placeholder="Телефон"><p class="contact-form__error-message">Введите свой телефон !</p></div></div><div class="contact-form__group-col"><div class="contact-form__group"><input class="contact-form__input" name="email" placeholder="Email"><p class="contact-form__error-message">Введите свой email !</p></div></div></div><div class="contact-form__group"><textarea class="contact-form__input" name="message" placeholder="Сообщение ..." rows="6"></textarea><p class="contact-form__error-message">Введите свое сообщение !</p></div><div class="contact-form__group contact-form__group_submit"><a class="contact-form__submit contact-form__submit_main" href="javascript:void(0)">Отправить</a><a class="contact-form__submit contact-form__submit_process" href="javascript:void(0)">Отправка ...</a></div><div class="contact-form__group contact-form__group_success"><div class="contact-form__submit-succesful">Ваше сообщение успешно отпралено!</div><a class="contact-form__submit contact-form__submit-again" href="javascript:void(0)">Отправить еще</a></div></div></div></div></main><footer class="footer"> <div class="container"> <div class="footer__logo-wrapper"><a class="footer__logo-link" href="/"><img class="footer__logo-icon" src="/wp-content/themes/vetq/frontend/build/img/b785626c99d7562816a2.svg" alt="VetQ Logo"></a><div class="footer__logo-text">Ветеринарные препараты</div></div><p class="footer__description">По любым дополнительным вопросам, пожалуйста, не стесняйтесь отправлять нам электронное письмо по адресу info@krasnagorka.by</p><p class="footer__copyed">© Все права защищены 2023</p></div></footer></div></body></html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>Contacts</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <style>
+            .app {
+                display: none;
+            }
+        </style>
+        <script
+            defer
+            src="/wp-content/themes/vetq/frontend/build/js/runtime.56148a78689701a67679.js"></script>
+        <script
+            defer
+            src="/wp-content/themes/vetq/frontend/build/js/vendors.4971439f1ae5140d179c.js"></script>
+        <script
+            defer
+            src="/wp-content/themes/vetq/frontend/build/js/contacts.5f4adeb0bd3f9fd83c7b.js"></script>
+    </head>
+    <body>
+        <div class="app">
+            <header class="header">
+                <div class="container">
+                    <div class="header__container">
+                        <div class="header__logo-wrapper">
+                            <a class="header__logo-link" href="/"
+                                ><img
+                                    class="header__logo-icon"
+                                    src="/wp-content/themes/vetq/frontend/build/img/9ff9b4adb4b02f29b759.svg"
+                                    alt="VetQ Logo"
+                            /></a>
+                            <div class="header__logo-text">Ветеринарные препараты</div>
+                        </div>
+                        <nav class="header__menu">
+                            <div class="menu-wrapp">
+                                <ul class="menu">
+                                    <li class="menu__item"><a href="/">Главная </a></li>
+                                    <li class="menu__item menu__item-sub-menu">
+                                        <a href="/catalog.html">Каталог</a>
+                                        <ul class="menu__sub-menu">
+                                            <li class="menu__item">
+                                                <a href="/product.html">Продукт 1 </a>
+                                            </li>
+                                            <li class="menu__item">
+                                                <a href="/product.html">Продукт 2 </a>
+                                            </li>
+                                            <li class="menu__item menu__item_active">
+                                                <a href="/product.html">Продукт 3 </a>
+                                            </li>
+                                            <li class="menu__item">
+                                                <a href="/product.html">Продукт 4 </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__item menu__item_active">
+                                        <a href="/contacts.html">Контакты</a>
+                                    </li>
+                                </ul>
+                                <a class="menu-wrapp__button" href="javascript:void(0);"
+                                    ><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 32.021 32.021">
+                                        <g data-name="Group 128" transform="translate(0.042 0.041)">
+                                            <circle
+                                                data-name="Ellipse 4"
+                                                cx="2.998"
+                                                cy="2.998"
+                                                r="2.998"
+                                                transform="translate(0 12.992)"
+                                                fill="#161616"></circle>
+                                            <circle
+                                                data-name="Ellipse 5"
+                                                cx="2.998"
+                                                cy="2.998"
+                                                r="2.998"
+                                                transform="translate(12.992 12.992)"
+                                                fill="#161616"></circle>
+                                            <circle
+                                                data-name="Ellipse 6"
+                                                cx="2.998"
+                                                cy="2.998"
+                                                r="2.998"
+                                                transform="translate(25.984 12.992)"
+                                                fill="#161616"></circle>
+                                        </g></svg
+                                ></a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="banner">
+                    <img
+                        class="banner__icon"
+                        src="/wp-content/themes/vetq/frontend/build/img/73a28ca3cc890aace5cb.jpg"
+                        alt="Контакты" />
+                    <div class="container banner__content">
+                        <h1 class="banner__title">Контакты</h1>
+                        <div class="hh"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="contact-form">
+                        <div class="contact-form__col">
+                            <h2 class="contact-form__title">
+                                Чтобы получить оптовый прайс или дополнительную информацию по
+                                товарам заполните форму
+                            </h2>
+                            <div class="contact-form__description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Necessitatibus ad dicta perferendis nihil placeat at inventore
+                                deleniti magni in illo.
+                            </div>
+                            <div class="contact-form__info-block">
+                                <div class="contact-form__info-title">Офис</div>
+                                <address class="contact-form__info-addres">
+                                    Abbot Kinney Blvd. Copenhagen CA 90291<br /><a
+                                        href="tel:+1123456789"
+                                        >+1123456789</a
+                                    ><br /><a href="mailto:jim@rock.com"
+                                        >hygge@qodeinteractive.com</a
+                                    >
+                                </address>
+                            </div>
+                        </div>
+                        <div class="contact-form__col">
+                            <div class="contact-form__group contact-form__group_required">
+                                <input class="contact-form__input" name="fio" placeholder="ФИО" />
+                                <p class="contact-form__error-message">Введите ФИО !</p>
+                            </div>
+                            <div class="contact-form__grid">
+                                <div class="contact-form__group-col">
+                                    <div class="contact-form__group contact-form__group_required">
+                                        <input
+                                            class="contact-form__input"
+                                            name="phone"
+                                            placeholder="Телефон" />
+                                        <p class="contact-form__error-message">
+                                            Введите свой телефон !
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-form__group-col">
+                                    <div class="contact-form__group contact-form__group_required">
+                                        <input
+                                            class="contact-form__input"
+                                            name="email"
+                                            placeholder="Email" />
+                                        <p class="contact-form__error-message">
+                                            Введите свой email !
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-form__grid">
+                                <div class="contact-form__group-col">
+                                    <div class="contact-form__group">
+                                        <input
+                                            class="contact-form__input"
+                                            name="country"
+                                            placeholder="Страна" />
+                                        <p class="contact-form__error-message">
+                                            Введите название страны !
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-form__group-col">
+                                    <div class="contact-form__group">
+                                        <input
+                                            class="contact-form__input"
+                                            name="city"
+                                            placeholder="Город" />
+                                        <p class="contact-form__error-message">
+                                            Введите название города !
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-form__group contact-form__group_required">
+                                <input
+                                    class="contact-form__input"
+                                    name="organization"
+                                    placeholder="Название предприятия" />
+                                <p class="contact-form__error-message">
+                                    Введите название предприятия !
+                                </p>
+                            </div>
+                            <div class="contact-form__group">
+                                <select class="contact-form__select" name="direction">
+                                    <option value="" disabled selected>
+                                        Направление Деятельности
+                                    </option>
+                                    <option value="opt">Оптовая торговля</option>
+                                    <option value="roznica">Розничная торговля</option>
+                                    <option value="proizvodstvo">Производство</option>
+                                    <option value="prochее">Прочее</option>
+                                </select>
+                                <p class="contact-form__error-message">
+                                    Выберите направление деятельности !
+                                </p>
+                            </div>
+                            <div class="contact-form__group">
+                                <textarea
+                                    class="contact-form__input"
+                                    name="message"
+                                    placeholder="Сообщение ..."
+                                    rows="6"></textarea>
+                                <p class="contact-form__error-message">Введите свое сообщение !</p>
+                            </div>
+                            <div class="contact-form__group contact-form__group_submit">
+                                <a
+                                    class="contact-form__submit contact-form__submit_main"
+                                    href="javascript:void(0)"
+                                    >Отправить</a
+                                ><a
+                                    class="contact-form__submit contact-form__submit_process"
+                                    href="javascript:void(0)"
+                                    >Отправка ...</a
+                                >
+                            </div>
+                            <div class="contact-form__group contact-form__group_success">
+                                <div class="contact-form__submit-succesful">
+                                    Ваше сообщение успешно отпралено!
+                                </div>
+                                <a
+                                    class="contact-form__submit contact-form__submit-again"
+                                    href="javascript:void(0)"
+                                    >Отправить еще</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__logo-wrapper">
+                        <a class="footer__logo-link" href="/"
+                            ><img
+                                class="footer__logo-icon"
+                                src="/wp-content/themes/vetq/frontend/build/img/b785626c99d7562816a2.svg"
+                                alt="VetQ Logo"
+                        /></a>
+                        <div class="footer__logo-text">Ветеринарные препараты</div>
+                    </div>
+                    <p class="footer__description">
+                        По любым дополнительным вопросам, пожалуйста, не стесняйтесь отправлять нам
+                        электронное письмо по адресу info@krasnagorka.by
+                    </p>
+                    <p class="footer__copyed">© Все права защищены 2023</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

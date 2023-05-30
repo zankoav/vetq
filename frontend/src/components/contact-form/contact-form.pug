@@ -1,7 +1,7 @@
-mixin contact-form
+mixin contact-form(businessTypes)
     .contact-form 
         .contact-form__col
-            h2.contact-form__title У Вас остались вопросы?
+            h2.contact-form__title Чтобы получить оптовый прайс или дополнительную информацию по товарам заполните форму
             .contact-form__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ad dicta perferendis nihil placeat at inventore deleniti magni in illo.
             .contact-form__info-block
                 .contact-form__info-title  Офис
@@ -12,18 +12,36 @@ mixin contact-form
                     br
                     | <a href="mailto:jim@rock.com">hygge@qodeinteractive.com</a>
         .contact-form__col
-            .contact-form__group
-                input.contact-form__input(name="name", placeholder="Имя")
-                p.contact-form__error-message Введите свое имя !
+            .contact-form__group.contact-form__group_required
+                input.contact-form__input(name="fio", placeholder="ФИО")
+                p.contact-form__error-message Введите ФИО !
             .contact-form__grid 
                 .contact-form__group-col
-                    .contact-form__group
+                    .contact-form__group.contact-form__group_required
                         input.contact-form__input(name="phone", placeholder="Телефон")
                         p.contact-form__error-message Введите свой телефон !
                 .contact-form__group-col
-                    .contact-form__group
+                    .contact-form__group.contact-form__group_required
                         input.contact-form__input(name="email", placeholder="Email")
                         p.contact-form__error-message Введите свой email !
+            .contact-form__grid 
+                .contact-form__group-col
+                    .contact-form__group
+                        input.contact-form__input(name="country", placeholder="Страна")
+                        p.contact-form__error-message Введите название страны !
+                .contact-form__group-col
+                    .contact-form__group
+                        input.contact-form__input(name="city", placeholder="Город")
+                        p.contact-form__error-message Введите название города !
+            .contact-form__group.contact-form__group_required
+                input.contact-form__input(name="organization", placeholder="Название предприятия")
+                p.contact-form__error-message Введите название предприятия !
+            .contact-form__group
+                select.contact-form__select(name="direction")
+                    option(value="" disabled selected) Направление Деятельности
+                    each item in businessTypes
+                        option(value=item.value)= item.label
+                p.contact-form__error-message Выберите направление деятельности !
             .contact-form__group
                 textarea.contact-form__input(name="message", placeholder="Сообщение ...", rows="6")
                 p.contact-form__error-message Введите свое сообщение !

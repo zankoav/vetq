@@ -44,32 +44,105 @@ get_header('vetq');
                     </div>
                     </div>
                     <div class="contact-form__col">
-                    <div class="contact-form__group">
-                        <input class="contact-form__input" name="name" placeholder="Имя">
-                        <p class="contact-form__error-message">Введите свое имя !</p>
-                    </div>
-                    <div class="contact-form__grid"> 
-                        <div class="contact-form__group-col">
+                        <div class="contact-form__group contact-form__group_required">
+                            <input class="contact-form__input" name="fio" placeholder="ФИО" />
+                            <p class="contact-form__error-message">Введите ФИО !</p>
+                        </div>
+                        <div class="contact-form__grid">
+                            <div class="contact-form__group-col">
+                                <div class="contact-form__group contact-form__group_required">
+                                    <input
+                                        class="contact-form__input"
+                                        name="phone"
+                                        placeholder="Телефон" />
+                                    <p class="contact-form__error-message">
+                                        Введите свой телефон !
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-form__group-col">
+                                <div class="contact-form__group contact-form__group_required">
+                                    <input
+                                        class="contact-form__input"
+                                        name="email"
+                                        placeholder="Email" />
+                                    <p class="contact-form__error-message">
+                                        Введите свой email !
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-form__grid">
+                            <div class="contact-form__group-col">
+                                <div class="contact-form__group">
+                                    <input
+                                        class="contact-form__input"
+                                        name="country"
+                                        placeholder="Страна" />
+                                    <p class="contact-form__error-message">
+                                        Введите название страны !
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-form__group-col">
+                                <div class="contact-form__group">
+                                    <input
+                                        class="contact-form__input"
+                                        name="city"
+                                        placeholder="Город" />
+                                    <p class="contact-form__error-message">
+                                        Введите название города !
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-form__group contact-form__group_required">
+                            <input
+                                class="contact-form__input"
+                                name="organization"
+                                placeholder="Название предприятия" />
+                            <p class="contact-form__error-message">
+                                Введите название предприятия !
+                            </p>
+                        </div>
                         <div class="contact-form__group">
-                            <input class="contact-form__input" name="phone" placeholder="Телефон">
-                            <p class="contact-form__error-message">Введите свой телефон !</p>
+                            <select class="contact-form__select" name="direction">
+                                <option value="" disabled selected>
+                                    Направление Деятельности
+                                </option>
+                                <option value="opt">Оптовая торговля</option>
+                                <option value="roznica">Розничная торговля</option>
+                                <option value="proizvodstvo">Производство</option>
+                                <option value="prochее">Прочее</option>
+                            </select>
+                            <p class="contact-form__error-message">
+                                Выберите направление деятельности !
+                            </p>
                         </div>
-                        </div>
-                        <div class="contact-form__group-col">
                         <div class="contact-form__group">
-                            <input class="contact-form__input" name="email" placeholder="Email">
-                            <p class="contact-form__error-message">Введите свой email !</p>
+                            <textarea
+                                class="contact-form__input"
+                                name="message"
+                                placeholder="Сообщение ..."
+                                rows="6"></textarea>
+                            <p class="contact-form__error-message">Введите свое сообщение !</p>
                         </div>
+                        <div class="contact-form__group contact-form__group_submit">
+                            <a
+                                class="contact-form__submit contact-form__submit_main"
+                                href="javascript:void(0)"
+                                >Отправить</a>
+                            <a class="contact-form__submit contact-form__submit_process"
+                                href="javascript:void(0)">Отправка ...</a>
                         </div>
-                    </div>
-                    <div class="contact-form__group">
-                        <textarea class="contact-form__input" name="message" placeholder="Сообщение ..." rows="6"></textarea>
-                        <p class="contact-form__error-message">Введите свое сообщение !</p>
-                    </div>
-                    <div class="contact-form__group contact-form__group_submit"><a class="contact-form__submit contact-form__submit_main" href="javascript:void(0)">Отправить</a><a class="contact-form__submit contact-form__submit_process" href="javascript:void(0)">Отправка ...</a></div>
-                    <div class="contact-form__group contact-form__group_success">
-                        <div class="contact-form__submit-succesful">Ваше сообщение успешно отпралено!</div><a class="contact-form__submit contact-form__submit-again" href="javascript:void(0)">Отправить еще</a>
-                    </div>
+                        <div class="contact-form__group contact-form__group_success">
+                            <div class="contact-form__submit-succesful">
+                                Ваше сообщение успешно отпралено!
+                            </div>
+                            <a
+                                class="contact-form__submit contact-form__submit-again"
+                                href="javascript:void(0)">Отправить еще</a>
+                        </div>
                     </div>
                 </div>
             </div>
