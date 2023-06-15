@@ -79,42 +79,45 @@ get_header('vetq');
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="container">
-                    <ul class="find-out-more">
-                        <?php foreach($more_items_result as $more_item):?>
-                            <li class="find-out-more__item">
+                <?php if(false):?>
+                    <div class="container">
+                        <ul class="find-out-more">
+                            <?php foreach($more_items_result as $more_item):?>
+                                <li class="find-out-more__item">
+                                    <img
+                                        class="find-out-more__item-icon"
+                                        src="<?=$more_item['icon']?>"
+                                        alt="<?=$more_item['title']?>" />
+                                    <h4 class="find-out-more__item-title"><?=$more_item['title']?></h4>
+                                    <p class="find-out-more__item-description"><?=$more_item['description']?></p>
+                                    <a class="find-out-more__item-link" href="<?=$more_item['link']?>">подробнее</a>
+                                </li>
+                            <?php endforeach;?>
+                        </ul>
+                        <div class="advantages">
+                            <div class="advantages__col">
                                 <img
-                                    class="find-out-more__item-icon"
-                                    src="<?=$more_item['icon']?>"
-                                    alt="<?=$more_item['title']?>" />
-                                <h4 class="find-out-more__item-title"><?=$more_item['title']?></h4>
-                                <p class="find-out-more__item-description"><?=$more_item['description']?></p>
-                                <a class="find-out-more__item-link" href="<?=$more_item['link']?>">подробнее</a>
-                            </li>
-                        <?php endforeach;?>
-                    </ul>
-                    <div class="advantages">
-                        <div class="advantages__col">
-                            <img
-                                class="advantages__image"
-                                src="<?=$advantage['image']?>"
-                                alt="<?=$advantage['title']?>" />
-                        </div>
-                        <div class="advantages__col">
-                            <div class="advantages__content">
-                                <div class="advantages__sub-title">приемущества</div>
-                                <div class="advantages__title"><?=$advantage['title']?></div>
-                                <p class="advantages__description"><?=$advantage['description']?></p>
-                                <ul class="advantages__list">
-                                    <?php foreach($advantage['benefits'] as $benefit):?>
-                                        <li class="advantages__list-item"><?=$benefit?></li>
-                                    <?php endforeach;?>
-                                </ul>
-                                <a class="button" href="<?=$advantage['button_link'];?>"><?=$advantage['button_title'];?></a>
+                                    class="advantages__image"
+                                    src="<?=$advantage['image']?>"
+                                    alt="<?=$advantage['title']?>" />
+                            </div>
+                            <div class="advantages__col">
+                                <div class="advantages__content">
+                                    <div class="advantages__sub-title">приемущества</div>
+                                    <div class="advantages__title"><?=$advantage['title']?></div>
+                                    <p class="advantages__description"><?=$advantage['description']?></p>
+                                    <ul class="advantages__list">
+                                        <?php foreach($advantage['benefits'] as $benefit):?>
+                                            <li class="advantages__list-item"><?=$benefit?></li>
+                                        <?php endforeach;?>
+                                    </ul>
+                                    <a class="button" href="<?=$advantage['button_link'];?>"><?=$advantage['button_title'];?></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <?php endif;?>
+                <div style="padding:1rem 0;"></div>
             </main>
         <?php get_template_part("backend/components/footer");?>
     </div>
