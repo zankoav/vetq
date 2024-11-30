@@ -8,15 +8,7 @@ $image = wp_get_attachment_image_url( get_post_meta( get_the_ID(), 'product_imag
 $description = get_post_meta( get_the_ID(), 'product_description', 1 );
 
 $taxonomies = wp_get_post_terms( get_the_ID(), 'veterinary' );
-$mainTax = false;
-
-if($taxonomies != null && count($taxonomies)){
-    $mainTax = $taxonomies[0];
-    $mainTax = [
-        'title' => $mainTax->name,
-        'link' => get_term_link($mainTax->term_id)
-    ];
-}
+$mainTax = $taxonomies;
 
 $taxonomiesAnimals = wp_get_post_terms( get_the_ID(), 'animals' );
 $animalsTax = false;
@@ -65,7 +57,13 @@ get_header('vetq');
                         <?php if($mainTax != false): ?>
                             <div class="product-main__line">
                                 <span class="product-main__line-label">Тип препарата:</span>
-                                <a class="product-main__line-link" href="<?=$mainTax['link']?>"><?=$mainTax['title']?></a>
+                                <ul class="product-main__animals">
+                                    <?php foreach($mainTax as $mainTaxItem):?>
+                                        <li class="product-main__animal"> 
+                                            <a class="product-main__line-link" href="<?=get_term_link($mainTaxItem->term_id)?>"><?=$mainTaxItem->name?></a>
+                                        </li>
+                                    <?php endforeach?>
+                                </ul>
                             </div>
                         <?php endif;?>
                         <?php if($animalsTax != false):?>
