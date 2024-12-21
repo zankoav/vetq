@@ -1,8 +1,11 @@
 <?php
 
-if (!defined('ABSPATH')) { exit; }
+if (!defined('ABSPATH')) {
+    exit;
+}
 
-function register_product_type() {
+function register_product_type()
+{
     register_post_type('product', array(
         'labels'             => array(
             'name'               => 'Каталог', // Основное название типа записи
@@ -36,36 +39,36 @@ function register_product_type() {
         'hierarchical' => true,
         'labels' => [
             'name' => __('Тип препарата'),
-            'singular_name' => __( 'Препарат' ),
-            'search_items' =>  __( 'Поиск препарата' ),
-            'popular_items' => __( 'Популярные препараты' ),
-            'all_items' => __( 'Все препараты' ),
-            'parent_item' => __( 'Родительский препарат' ),
-            'parent_item_colon' => __( 'Родительский айтем:' ),
-            'edit_item' => __( 'Редактировать Препарат' ),
-            'update_item' => __( 'Обновить Препарат' ),
-            'add_new_item' => __( 'Добавить новый Препарат' ),
-            'new_item_name' => __( 'Имя нового препарата' ),
+            'singular_name' => __('Препарат'),
+            'search_items' =>  __('Поиск препарата'),
+            'popular_items' => __('Популярные препараты'),
+            'all_items' => __('Все препараты'),
+            'parent_item' => __('Родительский препарат'),
+            'parent_item_colon' => __('Родительский айтем:'),
+            'edit_item' => __('Редактировать Препарат'),
+            'update_item' => __('Обновить Препарат'),
+            'add_new_item' => __('Добавить новый Препарат'),
+            'new_item_name' => __('Имя нового препарата'),
         ],
         'show_ui' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'catalog' ),
+        'rewrite' => array('slug' => 'catalog'),
     ));
 
-    register_taxonomy('animals',array('product'), array(
+    register_taxonomy('animals', array('product'), array(
         'hierarchical' => true,
         'labels' => [
             'name' => __('Животные'),
-            'singular_name' => __( 'Животное' ),
-            'search_items' =>  __( 'Поиск животных' ),
-            'popular_items' => __( 'Популярные животные' ),
-            'all_items' => __( 'Все животные' ),
-            'parent_item' => __( 'Родительский айтем' ),
-            'parent_item_colon' => __( 'Родительский айтем:' ),
-            'edit_item' => __( 'Редактировать Животное' ),
-            'update_item' => __( 'Обновить Животное' ),
-            'add_new_item' => __( 'Добавить новое Животное' ),
-            'new_item_name' => __( 'Имя нового животного' ),
+            'singular_name' => __('Животное'),
+            'search_items' =>  __('Поиск животных'),
+            'popular_items' => __('Популярные животные'),
+            'all_items' => __('Все животные'),
+            'parent_item' => __('Родительский айтем'),
+            'parent_item_colon' => __('Родительский айтем:'),
+            'edit_item' => __('Редактировать Животное'),
+            'update_item' => __('Обновить Животное'),
+            'add_new_item' => __('Добавить новое Животное'),
+            'new_item_name' => __('Имя нового животного'),
         ],
         'show_ui' => true,
         'query_var' => true,
@@ -75,22 +78,24 @@ function register_product_type() {
 
 add_action('init', 'register_product_type');
 
-function my_commmunity_post_link( $post_link, $id = 0 ){
+function my_commmunity_post_link($post_link, $id = 0)
+{
     $post = get_post($id);
-    if ( is_object( $post ) && $post->post_type == 'product' ){
-        $terms = wp_get_object_terms( $post->ID, 'veterinary' );
-        if( !empty($terms) ){
-            return str_replace( '%veterinary%' , $terms[0]->slug , $post_link );
+    if (is_object($post) && $post->post_type == 'product') {
+        $terms = wp_get_object_terms($post->ID, 'veterinary');
+        if (!empty($terms)) {
+            return str_replace('%veterinary%', $terms[0]->slug, $post_link);
         }
     }
     return $post_link;
 }
-add_filter( 'post_type_link', 'my_commmunity_post_link', 1, 3 );
+add_filter('post_type_link', 'my_commmunity_post_link', 1, 3);
 
 add_action('cmb2_admin_init', 'cmb2_product');
 
-function cmb2_product(){
-    
+function cmb2_product()
+{
+
     $cmb = new_cmb2_box(array(
         'id'           => 'product_settings_id',
         'title'        => 'Настройки продукта',
@@ -114,16 +119,16 @@ function cmb2_product(){
         'type' => 'textarea_small',
     ));
 
-   $cmb->add_field( array(
-		'name' => esc_html__( 'Картинка', 'vetq' ),
-		'desc' => esc_html__( 'Рекомендуемы размер 560 x 640', 'vetq' ),
-		'id'   => 'product_image',
-		'type' => 'file',
-        'preview_size' => array( 560, 640 ),
+    $cmb->add_field(array(
+        'name' => esc_html__('Картинка', 'vetq'),
+        'desc' => esc_html__('Рекомендуемы размер 560 x 640', 'vetq'),
+        'id'   => 'product_image',
+        'type' => 'file',
+        'preview_size' => array(560, 640),
         'options' => array(
             'url' => false
         ),
-	) );
+    ));
 
     $group_instractions = $cmb->add_field(array(
         'id'          => 'product_instractions',
@@ -174,12 +179,12 @@ function cmb2_product(){
         'id'           => 'content',
         'type'         => 'wysiwyg'
     ));
-
 }
 
 add_action('cmb2_admin_init', 'animals_cmb2');
 
-function animals_cmb2(){
+function animals_cmb2()
+{
     $cmb = new_cmb2_box(array(
         'id'           => 'animal_settings_id',
         'title'        => 'Настройки категории',
@@ -190,21 +195,22 @@ function animals_cmb2(){
         'show_names'   => true,
     ));
 
-    $cmb->add_field( array(
-		'name' => esc_html__( 'Картинка', 'vetq' ),
-		'desc' => esc_html__( 'Будьте внимательны, формат картинки очень важен', 'vetq' ),
-		'id'   => 'animal_image',
-		'type' => 'file',
-        'preview_size' => array( 100, 100 ),
+    $cmb->add_field(array(
+        'name' => esc_html__('Картинка', 'vetq'),
+        'desc' => esc_html__('Будьте внимательны, формат картинки очень важен', 'vetq'),
+        'id'   => 'animal_image',
+        'type' => 'file',
+        'preview_size' => array(100, 100),
         'options' => array(
             'url' => false
         ),
-	) );
+    ));
 }
 
 add_action('cmb2_admin_init', 'veterinary_cmb2');
 
-function veterinary_cmb2(){
+function veterinary_cmb2()
+{
     $cmb = new_cmb2_box(array(
         'id'           => 'veterinary_settings_id',
         'title'        => 'Настройки категории',
@@ -215,14 +221,21 @@ function veterinary_cmb2(){
         'show_names'   => true,
     ));
 
-    $cmb->add_field( array(
-		'name' => esc_html__( 'Картинка', 'vetq' ),
-		'desc' => esc_html__( 'Будьте внимательны, формат картинки очень важен', 'vetq' ),
-		'id'   => 'veterinary_image',
-		'type' => 'file',
-        'preview_size' => array( 100, 100 ),
+    $cmb->add_field(array(
+        'name' => esc_html__('Картинка', 'vetq'),
+        'desc' => esc_html__('Будьте внимательны, формат картинки очень важен', 'vetq'),
+        'id'   => 'veterinary_image',
+        'type' => 'file',
+        'preview_size' => array(100, 100),
         'options' => array(
             'url' => false
         ),
-	) );
+    ));
+
+    $cmb->add_field(array(
+        'name' => esc_html__('Цвет плюса', 'vetq'),
+        'id'   => 'veterinary_icon_color',
+        'type'    => 'colorpicker',
+        'default' => '#000000'
+    ));
 }
