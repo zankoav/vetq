@@ -106,7 +106,7 @@ $query = new WP_Query([
                                             <?php else: ?>
                                                 <img class="catalog__aside-list-item-icon catalog__aside-list-item-icon_small" src="<?= $veterinary_icon ?>" alt="<?= $veterinary->name ?>" />
                                             <?php endif; ?>
-                                            <span class="catalog__aside-list-item-link-title"><?= $veterinary->name ?></span>
+                                            <span class="catalog__aside-list-item-link-title"><?= $veterinary->name ?> ( <?= $veterinary->count ?> )</span>
                                         </a>
                                     </li>
                                 <?php endforeach; ?>
