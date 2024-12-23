@@ -57,8 +57,8 @@
 
     &__line {
         display: flex;
-        align-items: center;
         margin-top: 1rem;
+        flex-wrap: wrap;
 
         &:first-child {
             margin-top: 0;
@@ -67,6 +67,10 @@
         &_column {
             flex-direction: column;
             align-items: initial;
+        }
+
+        @include md {
+            flex-wrap: nowrap;
         }
     }
 
@@ -81,6 +85,12 @@
         font-weight: 600;
         font-size: 16px;
         margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        flex-shrink: 0;
+
+        @include md {
+            margin-bottom: 0;
+        }
     }
 
     &__line-link {
@@ -94,8 +104,7 @@
 
     &__animals {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-wrap: wrap;
     }
 
     &__animal {
@@ -103,6 +112,7 @@
             content: ',';
             color: $GRAY_3;
             margin-right: 0.25rem;
+            margin-left: 0;
         }
 
         &:last-child {
