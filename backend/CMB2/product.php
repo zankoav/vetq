@@ -74,6 +74,46 @@ function register_product_type()
         'query_var' => true,
         'rewrite' => false,
     ));
+
+    register_taxonomy('maker', array('product'), array(
+        'hierarchical' => true,
+        'labels' => [
+            'name' => __('Производитель'),
+            'singular_name' => __('Производитель'),
+            'search_items' =>  __('Поиск Производителя'),
+            'popular_items' => __('Популярные Производители'),
+            'all_items' => __('Все Производители'),
+            'parent_item' => __('Родительский айтем'),
+            'parent_item_colon' => __('Родительский айтем:'),
+            'edit_item' => __('Редактировать Производителя'),
+            'update_item' => __('Обновить Производителя'),
+            'add_new_item' => __('Добавить нового Производителя'),
+            'new_item_name' => __('Имя нового Производителя'),
+        ],
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => false,
+    ));
+
+    register_taxonomy('country', array('product'), array(
+        'hierarchical' => true,
+        'labels' => [
+            'name' => __('Страна'),
+            'singular_name' => __('Страна'),
+            'search_items' =>  __('Поиск Страны'),
+            'popular_items' => __('Популярные Страны'),
+            'all_items' => __('Все Страны'),
+            'parent_item' => __('Родительский айтем'),
+            'parent_item_colon' => __('Родительский айтем:'),
+            'edit_item' => __('Редактировать Страну'),
+            'update_item' => __('Обновить Страну'),
+            'add_new_item' => __('Добавить новую Страну'),
+            'new_item_name' => __('Имя новой Страны'),
+        ],
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => false,
+    ));
 }
 
 add_action('init', 'register_product_type');

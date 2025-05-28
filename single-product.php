@@ -17,6 +17,9 @@ if($taxonomiesAnimals != null && count($taxonomiesAnimals)){
     $animalsTax = $taxonomiesAnimals;
 }
 
+$taxonomiesMakers = wp_get_post_terms( get_the_ID(), 'maker' );
+$taxonomiesCountries = wp_get_post_terms( get_the_ID(), 'country' );
+
 $instractions = get_post_meta( get_the_ID(), 'product_instractions', true );
 $instractionsResult = [];
 foreach ( (array) $instractions as $key => $entry ) {
@@ -73,6 +76,30 @@ get_header('vetq');
                                     <?php foreach($animalsTax as $animalTax):?>
                                         <li class="product-main__animal"> 
                                             <a class="product-main__line-link" href="<?=get_term_link($animalTax->term_id)?>"><?=$animalTax->name?></a>
+                                        </li>
+                                    <?php endforeach?>
+                                </ul>
+                            </div>
+                        <?php endif;?>
+                        <?php if($taxonomiesMakers != null):?>
+                            <div class="product-main__line">
+                                <span class="product-main__line-label">Производитель:</span>
+                                <ul class="product-main__animals">
+                                    <?php foreach($taxonomiesMakers as $makerTax):?>
+                                        <li class="product-main__animal"> 
+                                            <a class="product-main__line-link" href="<?=get_term_link($makerTax->term_id)?>"><?=$makerTax->name?></a>
+                                        </li>
+                                    <?php endforeach?>
+                                </ul>
+                            </div>
+                        <?php endif;?>
+                        <?php if($taxonomiesCountries != null):?>
+                            <div class="product-main__line">
+                                <span class="product-main__line-label">Страна:</span>
+                                <ul class="product-main__animals">
+                                    <?php foreach($taxonomiesCountries as $countryTax):?>
+                                        <li class="product-main__animal"> 
+                                            <a class="product-main__line-link" href="<?=get_term_link($countryTax->term_id)?>"><?=$countryTax->name?></a>
                                         </li>
                                     <?php endforeach?>
                                 </ul>
