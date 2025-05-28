@@ -2,13 +2,16 @@
 
 .swiper-banner {
     position: relative;
-    height: calc(100vh - 160px);
     min-height: 300px;
     width: 100%;
     margin-top: 2rem;
 
     @include sm {
         margin-top: 0;
+    }
+
+    @include lg {
+        height: calc(100vh - 160px);
     }
 
     @include hd {
