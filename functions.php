@@ -44,6 +44,8 @@ function page_scripts(){
     }else if(
         is_tax('animals') or 
         is_tax('veterinary') or 
+        is_tax('maker') or 
+        is_tax('country') or 
         is_page_template('template-page-catalog.php')
     ){
         $target = $assets->asset('catalog.js');
