@@ -73,6 +73,7 @@ $animals = get_terms(['taxonomy' => 'animals']);
                 <aside class="catalog__aside">
                     <?php if (isset($veterinaries) && count($veterinaries) > 0): ?>
                         <div class="catalog__aside-block">
+                            <h4 class="catalog__aside-title">Тип препарата</h4>
                             <ul class="catalog__aside-list">
                                 <?php foreach ($veterinaries as $veterinary):
                                     $veterinary_color = get_term_meta($veterinary->term_id, 'veterinary_icon_color', 1);
