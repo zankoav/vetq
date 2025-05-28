@@ -6,12 +6,16 @@
     @include md {
         padding: 0;
         display: flex;
+        position: relative;
     }
 
     &__aside {
         @include md {
             max-width: 320px;
             flex: 1 0 320px;
+            position: sticky;
+            height: 100vh;
+            top: 3rem;
             padding-right: 1.125rem;
             padding-top: 3rem;
             border-right: 1px solid $GRAY_2;
