@@ -53,6 +53,26 @@
             'title' => 'Препараты для '.single_term_title('', 0),
             'link' => get_term_link(get_queried_object()->term_id)
         ];
+    }else if(is_tax('maker')){
+        $breadcrumbs[] = [
+            'title' => 'Каталог',
+            'link' => get_permalink( get_page_by_path( 'maker' ) )
+        ];
+
+        $breadcrumbs[] = [
+            'title' => 'Производитель '.single_term_title('', 0),
+            'link' => get_term_link(get_queried_object()->term_id)
+        ];
+    }else if(is_tax('country')){
+        $breadcrumbs[] = [
+            'title' => 'Каталог',
+            'link' => get_permalink( get_page_by_path( 'country' ) )
+        ];
+
+        $breadcrumbs[] = [
+            'title' => 'Страна '.single_term_title('', 0),
+            'link' => get_term_link(get_queried_object()->term_id)
+        ];
     }
 ?>
 <div class="breadcrumbs">
