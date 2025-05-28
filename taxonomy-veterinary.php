@@ -8,6 +8,8 @@ get_header('vetq');
 
 $veterinaries = get_terms(['taxonomy' => 'veterinary']);
 $animals = get_terms(['taxonomy' => 'animals']);
+$makers = get_terms(['taxonomy' => 'maker']);
+$countries = get_terms(['taxonomy' => 'country']);
 
 ?>
 <div class="app">
@@ -114,6 +116,34 @@ $animals = get_terms(['taxonomy' => 'animals']);
                                         <a class="catalog__aside-list-item-link catalog__aside-list-item-link_animal" href="<?= get_term_link($animal->term_id) ?>">
                                             <img class="catalog__aside-list-item-icon" src="<?= $animal_icon ?>" alt="<?= $animal->name ?>">
                                             <span class="catalog__aside-list-item-link-title"><?= $animal->name ?> ( <?= $animal->count ?> )</span>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($makers) && count($makers) > 0): ?>
+                        <div class="catalog__aside-block">
+                            <h4 class="catalog__aside-title">Производители</h4>
+                            <ul class="catalog__aside-list">
+                                <?php foreach ($makers as $maker): ?>
+                                    <li class="catalog__aside-list-item">
+                                        <a class="catalog__aside-list-item-link catalog__aside-list-item-link_animal" href="<?= get_term_link($maker->term_id) ?>">
+                                            <span class="catalog__aside-list-item-link-title"><?= $maker->name ?> ( <?= $maker->count ?> )</span>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($countries) && count($countries) > 0): ?>
+                        <div class="catalog__aside-block">
+                            <h4 class="catalog__aside-title">Страны</h4>
+                            <ul class="catalog__aside-list">
+                                <?php foreach ($countries as $country): ?>
+                                    <li class="catalog__aside-list-item">
+                                        <a class="catalog__aside-list-item-link catalog__aside-list-item-link_animal" href="<?= get_term_link($country->term_id) ?>">
+                                            <span class="catalog__aside-list-item-link-title"><?= $country->name ?> ( <?= $country->count ?> )</span>
                                         </a>
                                     </li>
                                 <?php endforeach; ?>
