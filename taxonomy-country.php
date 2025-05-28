@@ -18,6 +18,85 @@ $countries = get_terms(['taxonomy' => 'country']);
         <?php get_template_part("backend/components/breadcrumbs"); ?>
         <div class="container">
             <div class="catalog">
+                <aside class="catalog__aside">
+                    <?php if (isset($veterinaries) && count($veterinaries) > 0): ?>
+                        <div class="catalog__aside-block">
+                            <h4 class="catalog__aside-title">Тип препарата</h4>
+                            <ul class="catalog__aside-list">
+                                <?php foreach ($veterinaries as $veterinary):
+                                    $veterinary_color = get_term_meta($veterinary->term_id, 'veterinary_icon_color', 1);
+                                    $veterinary_icon = get_term_meta($veterinary->term_id, 'veterinary_image', 1);
+                                ?>
+                                    <li class="catalog__aside-list-item">
+                                        <a class="catalog__aside-list-item-link" href="<?= get_term_link($veterinary->term_id) ?>">
+                                            <?php if ($veterinary_color != null): ?>
+                                                <svg
+                                                    class="catalog__aside-list-item-icon catalog__aside-list-item-icon_small"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="25"
+                                                    height="25"
+                                                    viewBox="0 0 25 25"
+                                                    fill="none">
+                                                    <circle cx="12.5" cy="12.5" r="12" stroke="<?= $veterinary_color ?>"></circle>
+                                                    <line x1="12.7917" y1="5" x2="12.7917" y2="20.625" stroke="<?= $veterinary_color ?>"></line>
+                                                    <line x1="5" y1="12.8333" x2="20.625" y2="12.8333" stroke="<?= $veterinary_color ?>"></line>
+                                                </svg>
+                                            <?php else: ?>
+                                                <img class="catalog__aside-list-item-icon catalog__aside-list-item-icon_small" src="<?= $veterinary_icon ?>" alt="<?= $veterinary->name ?>" />
+                                            <?php endif; ?>
+                                            <span class="catalog__aside-list-item-link-title"><?= $veterinary->name ?> ( <?= $veterinary->count ?> )</span>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($animals) && count($animals) > 0): ?>
+                        <div class="catalog__aside-block">
+                            <h4 class="catalog__aside-title">Вид животных</h4>
+                            <ul class="catalog__aside-list">
+                                <?php foreach ($animals as $animal):
+                                    $animal_icon = get_term_meta($animal->term_id, 'animal_image', 1);
+                                ?>
+                                    <li class="catalog__aside-list-item">
+                                        <a class="catalog__aside-list-item-link catalog__aside-list-item-link_animal" href="<?= get_term_link($animal->term_id) ?>">
+                                            <img class="catalog__aside-list-item-icon" src="<?= $animal_icon ?>" alt="<?= $animal->name ?>">
+                                            <span class="catalog__aside-list-item-link-title"><?= $animal->name ?> ( <?= $animal->count ?> )</span>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($makers) && count($makers) > 0): ?>
+                        <div class="catalog__aside-block">
+                            <h4 class="catalog__aside-title">Производители</h4>
+                            <ul class="catalog__aside-list">
+                                <?php foreach ($makers as $maker): ?>
+                                    <li class="catalog__aside-list-item">
+                                        <a class="catalog__aside-list-item-link catalog__aside-list-item-link_animal" href="<?= get_term_link($maker->term_id) ?>">
+                                            <span class="catalog__aside-list-item-link-title"><?= $maker->name ?> ( <?= $maker->count ?> )</span>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($countries) && count($countries) > 0): ?>
+                        <div class="catalog__aside-block">
+                            <h4 class="catalog__aside-title">Страны</h4>
+                            <ul class="catalog__aside-list">
+                                <?php foreach ($countries as $country): ?>
+                                    <li class="catalog__aside-list-item">
+                                        <a class="catalog__aside-list-item-link catalog__aside-list-item-link_animal" href="<?= get_term_link($country->term_id) ?>">
+                                            <span class="catalog__aside-list-item-link-title"><?= $country->name ?> ( <?= $country->count ?> )</span>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                </aside>
                 <div class="catalog__main">
                     <div class="catalog__search">
                         <h1 class="catalog__title"><?= single_term_title() ?></h1>
@@ -72,85 +151,6 @@ $countries = get_terms(['taxonomy' => 'country']);
                         <?php endwhile; ?>
                     </div>
                 </div>
-                <aside class="catalog__aside">
-                    <?php if (isset($veterinaries) && count($veterinaries) > 0): ?>
-                        <div class="catalog__aside-block">
-                            <h4 class="catalog__aside-title">Тип препарата</h4>
-                            <ul class="catalog__aside-list">
-                                <?php foreach ($veterinaries as $veterinary):
-                                    $veterinary_color = get_term_meta($veterinary->term_id, 'veterinary_icon_color', 1);
-                                    $veterinary_icon = get_term_meta($veterinary->term_id, 'veterinary_image', 1);
-                                ?>
-                                    <li class="catalog__aside-list-item">
-                                        <a class="catalog__aside-list-item-link" href="<?= get_term_link($veterinary->term_id) ?>">
-                                            <?php if ($veterinary_color != null): ?>
-                                                <svg
-                                                    class="catalog__aside-list-item-icon catalog__aside-list-item-icon_small"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="25"
-                                                    height="25"
-                                                    viewBox="0 0 25 25"
-                                                    fill="none">
-                                                    <circle cx="12.5" cy="12.5" r="12" stroke="<?= $veterinary_color ?>"></circle>
-                                                    <line x1="12.7917" y1="5" x2="12.7917" y2="20.625" stroke="<?= $veterinary_color ?>"></line>
-                                                    <line x1="5" y1="12.8333" x2="20.625" y2="12.8333" stroke="<?= $veterinary_color ?>"></line>
-                                                </svg>
-                                            <?php else: ?>
-                                                <img class="catalog__aside-list-item-icon catalog__aside-list-item-icon_small" src="<?= $veterinary_icon ?>" alt="<?= $veterinary->name ?>" />
-                                            <?php endif; ?>
-                                            <span class="catalog__aside-list-item-link-title"><?= $veterinary->name ?> ( <?= $veterinary->count ?> )</span>
-                                        </a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (isset($animals) && count($animals) > 0): ?>
-                        <div class="catalog__aside-block">
-                            <h4 class="catalog__aside-title">Вид животных</h4>
-                            <ul class="catalog__aside-list">
-                                <?php foreach ($animals as $animal):
-                                    $animal_icon = get_term_meta($animal->term_id, 'animal_image', 1);
-                                ?>
-                                    <li class="catalog__aside-list-item">
-                                        <a class="catalog__aside-list-item-link catalog__aside-list-item-link_animal" href="<?= get_term_link($animal->term_id) ?>">
-                                            <img class="catalog__aside-list-item-icon" src="<?= $animal_icon ?>" alt="<?= $animal->name ?>">
-                                            <span class="catalog__aside-list-item-link-title"><?= $animal->name ?> ( <?= $animal->count ?> )</span>
-                                        </a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    <?php endif; ?>
-                     <?php if (isset($makers) && count($makers) > 0): ?>
-                        <div class="catalog__aside-block">
-                            <h4 class="catalog__aside-title">Производители</h4>
-                            <ul class="catalog__aside-list">
-                                <?php foreach ($makers as $maker): ?>
-                                    <li class="catalog__aside-list-item">
-                                        <a class="catalog__aside-list-item-link catalog__aside-list-item-link_animal" href="<?= get_term_link($maker->term_id) ?>">
-                                            <span class="catalog__aside-list-item-link-title"><?= $maker->name ?> ( <?= $maker->count ?> )</span>
-                                        </a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (isset($countries) && count($countries) > 0): ?>
-                        <div class="catalog__aside-block">
-                            <h4 class="catalog__aside-title">Страны</h4>
-                            <ul class="catalog__aside-list">
-                                <?php foreach ($countries as $country): ?>
-                                    <li class="catalog__aside-list-item">
-                                        <a class="catalog__aside-list-item-link catalog__aside-list-item-link_animal" href="<?= get_term_link($country->term_id) ?>">
-                                            <span class="catalog__aside-list-item-link-title"><?= $country->name ?> ( <?= $country->count ?> )</span>
-                                        </a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    <?php endif; ?>
-                </aside>
             </div>
         </div>
     </main>

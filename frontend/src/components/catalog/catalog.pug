@@ -1,5 +1,28 @@
 mixin catalog
     .catalog
+        aside.catalog__aside 
+            .catalog__aside-block
+                h4.catalog__aside-title Фармацевтическая группа
+                ul.catalog__aside-list
+                    li.catalog__aside-list-item 
+                        a.catalog__aside-list-item-link(href="#")
+                            img.catalog__aside-list-item-icon.catalog__aside-list-item-icon_small(src=require("@img/plus.svg") alt="")    
+                            span.catalog__aside-list-item-link-title Антибактериальные препараты
+                    li.catalog__aside-list-item
+                        a.catalog__aside-list-item-link(href="#") 
+                            img.catalog__aside-list-item-icon.catalog__aside-list-item-icon_small(src=require("@img/plus-red.svg") alt="")    
+                            span.catalog__aside-list-item-link-title Витаминно-минеральные препараты
+            .catalog__aside-block
+                h4.catalog__aside-title Вид животного
+                ul.catalog__aside-list
+                    li.catalog__aside-list-item
+                        a.catalog__aside-list-item-link.catalog__aside-list-item-link_animal(href="#") 
+                            img.catalog__aside-list-item-icon(src=require("@img/animals/птица.svg") alt="")    
+                            span.catalog__aside-list-item-link-title Куры
+                    li.catalog__aside-list-item
+                        a.catalog__aside-list-item-link.catalog__aside-list-item-link_animal(href="#")
+                            img.catalog__aside-list-item-icon(src=require("@img/animals/корова.svg") alt="")    
+                            span.catalog__aside-list-item-link-title Коровы
         .catalog__main
             .catalog__search 
                 h1.catalog__title Антибактериальные препараты
@@ -21,27 +44,3 @@ mixin catalog
                     +product({title:"Бенстреп", description:"Порошок для орального применения"})
                 .catalog__product 
                     +product({title:"Гентам БТ", description:"Раствор для инъекций"})
-        aside.catalog__aside 
-                .catalog__aside-block
-                    h4.catalog__aside-title Фармацевтическая группа
-                    ul.catalog__aside-list
-                        li.catalog__aside-list-item 
-                            a.catalog__aside-list-item-link(href="#")
-                                img.catalog__aside-list-item-icon.catalog__aside-list-item-icon_small(src=require("@img/plus.svg") alt="")    
-                                span.catalog__aside-list-item-link-title Антибактериальные препараты
-                        li.catalog__aside-list-item
-                            a.catalog__aside-list-item-link(href="#") 
-                                img.catalog__aside-list-item-icon.catalog__aside-list-item-icon_small(src=require("@img/plus-red.svg") alt="")    
-                                span.catalog__aside-list-item-link-title Витаминно-минеральные препараты
-                .catalog__aside-block
-                    h4.catalog__aside-title Вид животного
-                    ul.catalog__aside-list
-                        li.catalog__aside-list-item
-                            a.catalog__aside-list-item-link.catalog__aside-list-item-link_animal(href="#") 
-                                img.catalog__aside-list-item-icon(src=require("@img/animals/птица.svg") alt="")    
-                                span.catalog__aside-list-item-link-title Куры
-                        li.catalog__aside-list-item
-                            a.catalog__aside-list-item-link.catalog__aside-list-item-link_animal(href="#")
-                                img.catalog__aside-list-item-icon(src=require("@img/animals/корова.svg") alt="")    
-                                span.catalog__aside-list-item-link-title Коровы
-                

@@ -14,3 +14,10 @@ $('.catalog__search-input').on('input', function () {
         }
     })
 })
+
+$('.catalog__aside-title').on('click', function () {
+    const $asideListEl = $(this).parent().find('.catalog__aside-list')
+    $(this).toggleClass('catalog__aside-title_active')
+    $asideListEl.slideToggle()
+})
+$('.catalog__aside-list')

@@ -14,7 +14,6 @@
             flex: 1 0 320px;
             padding-right: 1.125rem;
             padding-top: 3rem;
-            order: -1;
             border-right: 1px solid $GRAY_2;
         }
     }
@@ -36,10 +35,34 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 28px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            transform: rotate(-45deg);
+            transition: all 0.3s;
+            border-right: 2px solid #000;
+            border-bottom: 2px solid #000;
+        }
+
+        &_active {
+            &:after {
+                transform: rotate(45deg) translateY(-2px);
+            }
+        }
     }
 
     &__aside-block {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__aside-list {
+        display: none;
     }
 
     &__aside-list-item-link {
