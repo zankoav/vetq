@@ -60,15 +60,15 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        color: #161616;
 
         @include sm {
             margin-left: 40px;
-            font-weight: 600;
         }
 
-        a {
-            display: none;
+        span {
             color: #161616;
+            display: none;
 
             @include sm {
                 display: flex;
