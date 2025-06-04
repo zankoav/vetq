@@ -59,7 +59,7 @@ function cmb2_contacts_page()
     $cmb_options->add_field(array(
         'name' => __('Telegram Link', 'vetq'),
         'id'   => 'contacts_telegram_link',
-        'type' => 'url',
+        'type' => 'text_url',
     ));
 }
 
