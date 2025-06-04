@@ -1,6 +1,9 @@
-<?php if (!defined('ABSPATH')) { exit; }
+<?php if (!defined('ABSPATH')) {
+    exit;
+}
 
-function cmb2_contacts_page() {
+function cmb2_contacts_page()
+{
 
     $cmb_options = new_cmb2_box(array(
         'id'           => 'vetq_contacts_page',
@@ -47,6 +50,17 @@ function cmb2_contacts_page() {
         'type' => 'text',
     ));
 
+    $cmb_options->add_field(array(
+        'name' => __('Telegram Name', 'vetq'),
+        'id'   => 'contacts_telegram_name',
+        'type' => 'text',
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => __('Telegram Link', 'vetq'),
+        'id'   => 'contacts_telegram_link',
+        'type' => 'url',
+    ));
 }
 
 add_action('cmb2_admin_init', 'cmb2_contacts_page');
