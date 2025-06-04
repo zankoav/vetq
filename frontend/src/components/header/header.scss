@@ -32,7 +32,6 @@
         text-decoration: none;
         display: flex;
     }
-    
 
     &__logo-text {
         display: none;
@@ -55,5 +54,19 @@
 
     &__menu {
         align-self: stretch;
+    }
+
+    &__telegram {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        a {
+            display: none;
+
+            @include sm {
+                display: flex;
+            }
+        }
     }
 }
