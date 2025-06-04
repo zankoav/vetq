@@ -67,10 +67,11 @@
         }
 
         span {
-            color: #161616;
             display: none;
 
             @include sm {
+                color: #161616;
+                font-weight: 600;
                 display: flex;
             }
         }
