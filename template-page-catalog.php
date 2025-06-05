@@ -32,7 +32,7 @@ $query = new WP_Query([
                 <aside class="catalog__aside">
                     <?php if (isset($veterinaries) && count($veterinaries) > 0): ?>
                         <div class="catalog__aside-block">
-                            <h4 class="catalog__aside-title">Тип препарата</h4>
+                            <h4 class="catalog__aside-title">Типы препаратов</h4>
                             <ul class="catalog__aside-list">
                                 <?php foreach ($veterinaries as $veterinary):
                                     $veterinary_icon = get_term_meta($veterinary->term_id, 'veterinary_image', 1);
@@ -64,7 +64,7 @@ $query = new WP_Query([
                     <?php endif; ?>
                     <?php if (isset($animals) && count($animals) > 0): ?>
                         <div class="catalog__aside-block">
-                            <h4 class="catalog__aside-title">Вид животных</h4>
+                            <h4 class="catalog__aside-title">Виды животных</h4>
                             <ul class="catalog__aside-list">
                                 <?php foreach ($animals as $animal):
                                     $animal_icon = get_term_meta($animal->term_id, 'animal_image', 1);
